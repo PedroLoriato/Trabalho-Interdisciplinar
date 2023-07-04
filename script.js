@@ -1,7 +1,0 @@
-/*
-Descrição:
-
-
-Autores:
-Versão:
-*/
