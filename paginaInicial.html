@@ -5,29 +5,36 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estilo-geral/cabecalho.css">
+  <link rel="stylesheet" href="./estilo-home/banner.css">
   <link rel="stylesheet" href="./estilo-home/main.css">
-  <link rel="stylesheet" href="./estilo-geral/banner.css">
+  <link rel="stylesheet" href="./estilo-geral/footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="./favicon/favicon-fazenda.png" type="image/x-icon">
-  <title>Interdisciplinar</title>
+  <link rel="shortcut icon" href="./imagens-geral/favicon-fazenda.png" type="image/x-icon">
+  <title>Fazenda Boi Gordo</title>
 </head>
 
 <body>
   <header>
     <div class="caixaHeader">
-      <a href="#bannerMain"><img src="./cabecalho/logo.png" alt="Logo do Site"></a>
+      <a href="#bannerMain"><img src="./imagens-geral/logo.png" alt="Logo do Site"></a>
       <nav>
         <ul>
           <li><a href="#">Nossa Fazenda</a></li>
           <li><a href="#secCarrossel">Nossas Espécies</a></li>
           <li><a href="#">Nosso Gado</a></li>
-          <li><a href="./aplicacao.html">Gerenciador Fazenda</a></li>
+          <li><a href="./pagina-aplicacao/listagemBoi.html">Gerenciador Fazenda</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <img src="./cabecalho/banner.jpg" alt="Banner do Site" id="bannerMain">
+    <div class="banner">
+      <p id="titleMain">FAZENDA BOI GORDO</p>
+      <p id="titleDesc">FAZENDA DE ENGORDA DE GADO</p>
+      <img src="./imagens-geral/banner.jpg" alt="Banner do Site" id="BannerMain">
+    </div>
+
     <section class="carrossel" id="secCarrossel">
 
       <h1>NOSSAS ESPÉCIES</h1>
@@ -64,13 +71,25 @@
           </div>
           <img src="./imagens-carrossel/imagem3.jpg">
         </label>
+        <img src="./icones/seta-esquerda.png" class="seta anterior">
+        <img src="./icones/seta-direita.png" class="seta proxima">
       </div>
-      <img src="./icones/seta-esquerda.png" class="seta anterior">
-      <img src="./icones/seta-direita.png" class="seta proxima">
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
+    <img class="footerLogo" src="./imagens-geral/favicon-fazenda.png" alt="Logo Rodapé">
+    <nav>
+      <ul>
+        <li><a href="#">Conheça mais</a></li>
+        <li><a href="#">Localização</a></li>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Apoie-nos</a></li>
+      </ul>
+    </nav>
+    <article class="copyright">
+      Fazenda Boi Gordo || Copyright © 2023 - Todos os direitos reservados
+    </article>
   </footer>
   <script src="./script.js"></script>
 </body>

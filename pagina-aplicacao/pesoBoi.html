@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo-aplicacao/main.css">
+    <link rel="stylesheet" href="../estilo-geral/cabecalho.css">
+    <link rel="stylesheet" href="../estilo-geral/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./imagens-geral/favicon-fazenda.png" type="image/x-icon">
+    <title>Peso do Boi</title>
+</head>
+
+<body>
+    <header>
+        <div class="caixaHeader">
+            <a><img src="../imagens-geral/logo.png" alt="Logo do Site"></a>
+            <nav>
+                <ul>
+                    <li><a href="../paginaInicial.html">Página Inicial</a></li>
+                    <li><a href="../pagina-aplicacao/listagemBoi.html">Listagem Boi</a></li>
+                    <li><a href="../pagina-aplicacao/pesoBoi.html">Peso do Boi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="principal">
+        <section class="filtroPesoBoi">
+            <h1>PESO DO BOI</h1>
+            <p>Filtro para pesquisar o Boi com Maior ou Menor Peso, após o período de engorda.</p>
+            <select id="sltPeso">
+                <option value="" disabled selected>Selecione um filtro:</option>
+                <option value="Maior">Maior Peso</option>
+                <option value="Menor">Menor Peso</option>
+            </select>
+            <input type="button" id="btFiltrarPeso" value="Filtrar">
+            <h2 id="outMaiorPeso"></h2>
+            <h2 id="outMenorPeso"></h2>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="footerLogo" src="../imagens-geral/favicon-fazenda.png" alt="Logo Rodapé">
+        <nav>
+            <ul>
+                <li><a href="#">Conheça mais</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="#">Informações</a></li>
+                <li><a href="#">Apoie-nos</a></li>
+            </ul>
+        </nav>
+        <article class="copyright">
+            Fazenda Boi Gordo || Copyright © 2023 - Todos os direitos reservados
+        </article>
+    </footer>
+    <script src="../script/vetores.js"></script>
+    <script src="../script/pesoBoi.js"></script>
+</body>
+
+</html>

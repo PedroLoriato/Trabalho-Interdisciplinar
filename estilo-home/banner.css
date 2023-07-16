@@ -1,51 +1,66 @@
-header {
-    position: fixed;
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+#BannerMain {
+    position: relative;
     width: 100%;
-    box-shadow: 0 10px 50px rgb(0, 0, 0);
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 0;
+    height: 500px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+    filter: brightness(50%) blur(2px);
 }
 
-header button{
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.caixaHeader {
-    width: 1024px;
-    margin: 0 auto;
+.banner {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
+    text-align: center;
 }
 
-.caixaHeader img {
-    width: 100px;
+.banner #titleMain {
+    color: rgb(71, 172, 8);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 120px;
+    position: absolute;
+    text-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5);
+    margin-bottom: 200px;
+    border-radius: 30px;
+    z-index: 1;
+    opacity: 0;
+    animation: aparecerTitulo 1s forwards;
 }
 
-nav ul {
-    font-size: 20px;
-    list-style-type: none;
-    font-family: 'Caprasimo', cursive;
+@keyframes aparecerTitulo {
+    0% {
+        opacity: 0;
+        transform: translateY(-90%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+.banner #titleDesc {
+    color: rgb(162, 243, 196);
+    font-size: 30px;
+    font-family: cursive;
+    position: absolute;
+    text-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5);
+    margin-top: 200px;
+    z-index: 1;
+    opacity: 0;
+    animation: aparecerDesc 1s forwards;
 }
 
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-}
+@keyframes aparecerDesc {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
 
-nav ul li a:hover {
-    color: rgb(64, 116, 30);
-    text-decoration: none;
-}
-
-#bannerMain {
-    height: 400px;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
