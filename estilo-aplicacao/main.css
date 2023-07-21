@@ -19,6 +19,7 @@ main {
     min-height: 100vh;
     text-align: center;
     word-wrap: break-word;
+    scroll-margin-top: 100px;
 }
 
 h1 {

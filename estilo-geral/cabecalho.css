@@ -55,6 +55,10 @@ header a {
     text-decoration: none;
 }
 
+header a.logo-imagem::after {
+    height: 0;
+}
+
 header a::after {
     content: '';
     position: absolute;
