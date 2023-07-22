@@ -6,7 +6,7 @@ Versão: 2.0
 */
 
 // Aplicação de pesquisar o Boi com Maior ou Menor Peso, após o período de engorda
-const sltPeso = document.getElementById("sltPeso");
+const sltPesoBoi = document.getElementById("sltPesoBoi");
 const btFiltrarPeso = document.getElementById("btFiltrarPeso");
 const outMaiorPeso = document.getElementById("outMaiorPeso");
 const outMenorPeso = document.getElementById("outMenorPeso");
@@ -14,12 +14,12 @@ const outMenorPeso = document.getElementById("outMenorPeso");
 btFiltrarPeso.addEventListener("click", calcularPeso);
 
 function calcularPeso() {
-    var peso = sltPeso.value;
+    var peso = sltPesoBoi.value;
 
     var indMaior = 0;
     var indMenor = 0;
 
-    if (sltPeso.value == "") {
+    if (sltPesoBoi.value == "") {
         alert("Por favor, selecione um filtro para pesquisar o Boi!");
         sltPeso.focus();
     }

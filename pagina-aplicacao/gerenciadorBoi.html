@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo-aplicacao/main.css">
+    <link rel="stylesheet" href="../estilo-geral/cabecalho.css">
+    <link rel="stylesheet" href="../estilo-geral/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./imagens-geral/favicon-fazenda.png" type="image/x-icon">
+    <title>Peso do Boi</title>
+</head>
+
+<body>
+    <header>
+        <div class="caixaHeader">
+            <a class="logo-imagem" href="#principal"><img src="../imagens-geral/logo.png" alt="Logo do Site"></a>
+            <nav>
+                <ul>
+                    <li><a href="../paginaInicial.html">Página Inicial</a></li>
+                    <li><a href="../pagina-aplicacao/listagemBoi.html">Listagem Boi</a></li>
+                    <li><a href="../pagina-aplicacao/pesoBoi.html">Peso do Boi</a></li>
+                    <li><a href="../pagina-aplicacao/gerenciadorBoi.html">Gerenciador dos Bois</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="principal">
+        <section class="gerenciadorBoi">
+            <h1>GERENCIADOR DE BOIS</h1>
+            <p>Gerenciador dos bois da fazenda, para adicionar um novo boi, com sua identificação e demais informações,
+            </p>
+            <p>e/ou remover do sistema um boi, por motivo de abate ou venda.</p>
+            <form action="">
+                <fieldset class="adicionarBoi">
+                    <h2>ADICIONAR BOI</h2>
+                    <label for="identificadorBoi">Idenficador do Boi:
+                        <input type="text" name="identificadorBoi" id="inIdentBoi" minlength="4" maxlength="4"
+                            title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
+                    </label>
+                    <label for="especieBoi">Espécie do Boi:
+                        <select name="especieBoi" id="sltEspecieBoi">
+                            <option value="" selected disabled>Selecione uma espécie</option>
+                            <option value="Angus">Angus</option>
+                            <option value="Hereford">Hereford</option>
+                            <option value="Nelore">Nelore</option>
+                        </select>
+                    </label>
+                    <label for="">Peso Inicial:
+                        <input type="text" name="" id="inPesoInicialBoi" minlength="1" maxlength="2"
+                            title="Peso Máximo: 13 arrobas | Utilize somente números."
+                            placeholder="Digite o peso em arrobas">
+                    </label>
+                    <label for="">Peso Final:
+                        <input type="text" name="" id="inPesoFinalBoi" minlength="2" maxlength="2"
+                            title="Peso Mínimo: 16 arrobas | Utilize somente números."
+                            placeholder="Digite o peso em arrobas">
+                    </label>
+                    <p>Período: 100 dias</p>
+                    <input type="submit" value="ADICIONAR" id="btAdicionarBoi">
+                </fieldset>
+            </form>
+    </main>
+
+    <footer class="footer">
+        <img class="footerLogo" src="../imagens-geral/favicon-fazenda.png" alt="Logo Rodapé">
+        <nav>
+            <ul>
+                <li><a href="#">Conheça mais</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="#">Informações</a></li>
+                <li><a href="#">Apoie-nos</a></li>
+            </ul>
+        </nav>
+        <article class="copyright">
+            Fazenda Boi Gordo || Copyright © 2023 - Todos os direitos reservados
+        </article>
+    </footer>
+    <script src="../script/vetores.js"></script>
+    <script src="../script/gerenciadorBoi.js"></script>
+</body>
+
+</html>

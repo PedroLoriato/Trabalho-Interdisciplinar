@@ -31,7 +31,7 @@ h1 {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-#btFiltrarBoi {
+#btFiltrarBoi, #btFiltrarPeso {
     padding: 10px;
     font-family: Verdana, sans-serif;
     border-radius: 5px;
@@ -41,16 +41,16 @@ h1 {
     transition: background-color box-shadow 0.2s ease-in-out;
 }
 
-#btFiltrarBoi:hover {
+#btFiltrarBoi:hover, #btFiltrarPeso:hover  {
     box-shadow: 0 0 0 2px rgb(35, 252, 6);
 }
 
-#btFiltrarBoi:active {
+#btFiltrarBoi:active, #btFiltrarPeso:active {
     background-color: rgba(1, 255, 1, 0.589);
     box-shadow: 0 0 0 2px rgb(255, 255, 255);
 }
 
-#sltFiltroBoi {
+#sltFiltroBoi, #sltPesoBoi {
     padding: 10px;
     font-family: Verdana, sans-serif;
     background: rgb(10, 234, 10);
@@ -59,7 +59,7 @@ h1 {
     cursor: pointer;
 }
 
-#sltFiltroBoi > option {
+#sltFiltroBoi > option, #sltPesoBoi > option {
     background: rgb(10, 234, 10);
 }
 
@@ -68,21 +68,7 @@ h1 {
     margin: 0 auto;
 }
 
-#sltPeso {
-    padding: 5px;
-    font-family: Verdana, sans-serif;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.listagemBoi p {
-    font-size: 12px;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.filtroPesoBoi p {
+.listagemBoi p, .filtroPesoBoi p, .gerenciadorBoi p {
     font-size: 12px;
     text-align: center;
     text-transform: uppercase;
@@ -99,4 +85,35 @@ h1 {
     text-align: justify;
     line-height: 1.5;
     margin-bottom: 10px;
+}
+
+.adicionarBoi {
+    display: inline-block;
+    width: 40px;
+    height: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.adicionarBoi > label {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.adicionarBoi > label > input {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+}
+
+.adicionarBoi > label > select {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+}
+
+.adicionarBoi > p {
+    font-size: 16px;
 }
