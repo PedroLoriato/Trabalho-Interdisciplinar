@@ -21,7 +21,4 @@ if (!sessionStorage.getItem('dataStored')) {
 
     // Marca que os dados foram armazenados
     sessionStorage.setItem('dataStored', 'true');
-    console.log('Dados armazenados com sucesso!');
-} else {
-    console.log('Os dados já foram armazenados anteriormente.');
 }
