@@ -32,11 +32,11 @@ function adicionarBoi() {
         alert("Atenção!\nDigite 4 caracteres para criar o identificador para o boi a ser adicionado ao sistema da fazenda.");
         inIdentBoi.value = "";
         inIdentBoi.focus();
-    } else  if (vetID.includes(identificadorBoi)) {
+    } else if (vetID.includes(identificadorBoi)) {
         alert("Atenção!\nJá existe um boi com este identificador no sistema da fazenda.");
         inIdentBoi.value = "";
         inIdentBoi.focus();
-    
+
     } else if (sltEspecieBoi.value == "") {
         alert("Atenção!\nSelecione a espécie do boi a ser adicionado ao sistema da fazenda.");
         sltEspecieBoi.focus();
@@ -60,11 +60,11 @@ function adicionarBoi() {
         alert("Atenção.\nDigite apenas números para o peso incial do boi.");
         inPesoFinalBoi.value = "";
         inPesoFinalBoi.focus();
-    }else if (pesoFinalBoi < 16) {
-            alert("Atenção.\nO peso mínimo permitido para o peso final é de 16 arrobas.");
-            inPesoInicialBoi.value = "";
-            inPesoInicialBoi.focus();
-    
+    } else if (pesoFinalBoi < 16) {
+        alert("Atenção.\nO peso mínimo permitido para o peso final é de 16 arrobas.");
+        inPesoInicialBoi.value = "";
+        inPesoInicialBoi.focus();
+
     } else {
 
         vetID.push(identificadorBoi);
