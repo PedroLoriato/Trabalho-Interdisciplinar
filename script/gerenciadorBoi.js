@@ -80,11 +80,67 @@ function adicionarBoi() {
         vetEspecie.push(especieBoi);
 
         alert(`O boi com identificador ${identificadorBoi} foi adicionado ao sistema da fazenda com sucesso!
-        \nO boi da espécie ${especieBoi} apresentou um peso inicial de ${pesoInicialBoi} arrobas, e o seu peso final, após um período de engorda de 100 dias, foi de ${pesoFinalBoi} arrobas.`)
+        \nO boi da espécie ${especieBoi} apresentou um peso inicial de ${pesoInicialBoi} arrobas, e o seu peso final, após um período de engorda de 100 dias, foi de 
+        ${pesoFinalBoi} arrobas.`)
 
         sessionStorage.setItem("vetID", JSON.stringify(vetID));
         sessionStorage.setItem("vetINI", JSON.stringify(vetINI));
         sessionStorage.setItem("vetFinal", JSON.stringify(vetFinal));
         sessionStorage.setItem("vetEspecie", JSON.stringify(vetEspecie));
+
+        inIdentBoi.value = "";
+        sltEspecieBoi.value = "";
+        inPesoFinalBoi.value = "";
+        inPesoFinalBoi.value = "";
     }
+
+}
+
+const inIdentRemovBoi = document.getElementById("inIdentRemovBoi");
+const outRemoverBoi = document.getElementById("outRemoverBoi");
+const btRemoverBoi = document.getElementById("btRemoverBoi");
+
+
+inIdentRemovBoi.addEventListener("input", function () {
+    if (inIdentRemovBoi.value.length === 4) {
+        infoRemoverBoi();
+    }
+});
+
+function infoRemoverBoi() {
+    var removerIdent = inIdentRemovBoi.value.toUpperCase();
+    var validacaoIdent = /^[a-zA-Z0-9]+$/.test(removerIdent);
+
+    if (inIdentRemovBoi.value == "") {
+        alert("Atenção!\n\nDigite um identificador válido para remover um boi do sistema da fazenda.");
+        inIdentRemovBoi.focus();
+    } else if (!validacaoIdent) {
+        alert("Atenção!\n\nUtilize apenas letras e números para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
+        inIdentRemovBoi.value = "";
+        inIdentRemovBoi.focus();
+    } else if (removerIdent.length < 4) {
+        alert("Atenção!\n\nDigite 4 caracteres para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
+        inIdentRemovBoi.value = "";
+        inIdentRemovBoi.focus();
+
+    } else if (!vetID.includes(removerIdent)) {
+        alert("Atenção!\n\nNenhum boi com este identificador foi encontrado no sistema da fazenda.\n\nTente Novamente.");
+        inIdentRemovBoi.value = "";
+        inIdentRemovBoi.focus();
+        outRemoverBoi.value = "";
+    } else {
+
+        for (var indBoi = 0; indBoi < vetID.length; indBoi++) {
+            if (removerIdent == vetID[indBoi]) {
+                outRemoverBoi.innerHTML = `<p>Foi encontrado o Boi com Identificador <span style="font-weight: bold; color: red;">${vetID[indBoi]}</span></p>
+                <p>Espécie: <span style="font-weight: bold;">${vetEspecie[indBoi]}</span></p>
+                <p>Peso inicial: <span style="font-weight: bold;"> ${vetINI[indBoi]} arrobas</span></p>
+                <p>Peso Final: <span style="font-weight: bold;">${vetFinal[indBoi]} arrobas</span></p>
+                <p> Período de Engorda: 100 dias.</p>`;
+
+                btRemoverBoi.style.display = "inline-block";
+            }
+        }
+    }
+
 }
