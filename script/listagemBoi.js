@@ -5,6 +5,11 @@ Descrição:
 Versão: 2.0 
 */
 
+vetID = JSON.parse(localStorage.getItem("vetID"));
+vetINI = JSON.parse(localStorage.getItem("vetINI"));
+vetFinal = JSON.parse(localStorage.getItem("vetFinal"));
+vetEspecie = JSON.parse(localStorage.getItem("vetEspecie"));
+
 // Aplicação de Listagem dos Bois
 const sltFiltroBoi = document.getElementById("sltFiltroBoi");
 const btFiltrarBoi = document.getElementById("btFiltrarBoi");

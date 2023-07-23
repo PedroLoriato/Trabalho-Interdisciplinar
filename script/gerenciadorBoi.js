@@ -1,3 +1,8 @@
+vetID = JSON.parse(localStorage.getItem("vetID"));
+vetINI = JSON.parse(localStorage.getItem("vetINI"));
+vetFinal = JSON.parse(localStorage.getItem("vetFinal"));
+vetEspecie = JSON.parse(localStorage.getItem("vetEspecie"));
+
 const inIdentBoi = document.getElementById("inIdentBoi");
 const sltEspecieBoi = document.getElementById("sltEspecieBoi");
 const inPesoInicialBoi = document.getElementById("inPesoInicialBoi");
@@ -27,7 +32,11 @@ function adicionarBoi() {
         alert("Atenção!\nDigite 4 caracteres para criar o identificador para o boi a ser adicionado ao sistema da fazenda.");
         inIdentBoi.value = "";
         inIdentBoi.focus();
-
+    } else  if (vetID.includes(identificadorBoi)) {
+        alert("Atenção!\nJá existe um boi com este identificador no sistema da fazenda.");
+        inIdentBoi.value = "";
+        inIdentBoi.focus();
+    
     } else if (sltEspecieBoi.value == "") {
         alert("Atenção!\nSelecione a espécie do boi a ser adicionado ao sistema da fazenda.");
         sltEspecieBoi.focus();
@@ -39,6 +48,10 @@ function adicionarBoi() {
         alert("Atenção.\nDigite apenas números para o peso incial do boi.");
         inPesoInicialBoi.value = "";
         inPesoInicialBoi.focus();
+    } else if (pesoInicialBoi > 13) {
+        alert("Atenção.\nO peso máximo permitido para o peso inicial é de 13 arrobas.");
+        inPesoInicialBoi.value = "";
+        inPesoInicialBoi.focus();
 
     } else if (inPesoFinalBoi.value == "") {
         alert("Atenção!\nDigite o peso final do boi a ser adicionado ao sistema da fazenda.");
@@ -47,6 +60,11 @@ function adicionarBoi() {
         alert("Atenção.\nDigite apenas números para o peso incial do boi.");
         inPesoFinalBoi.value = "";
         inPesoFinalBoi.focus();
+    }else if (pesoFinalBoi < 16) {
+            alert("Atenção.\nO peso mínimo permitido para o peso final é de 16 arrobas.");
+            inPesoInicialBoi.value = "";
+            inPesoInicialBoi.focus();
+    
     } else {
 
         vetID.push(identificadorBoi);
@@ -57,5 +75,9 @@ function adicionarBoi() {
         alert(`O boi com identificador ${identificadorBoi} foi adicionado ao sistema da fazenda com sucesso!
         \nO boi da espécie ${especieBoi} apresentou um peso inicial de ${pesoInicialBoi} arrobas, e o seu peso final, após um período de engorda de 100 dias, foi de ${pesoFinalBoi} arrobas.`)
 
+        localStorage.setItem("vetID", JSON.stringify(vetID));
+        localStorage.setItem("vetINI", JSON.stringify(vetINI));
+        localStorage.setItem("vetFinal", JSON.stringify(vetFinal));
+        localStorage.setItem("vetEspecie", JSON.stringify(vetEspecie));
     }
 }
