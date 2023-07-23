@@ -80,8 +80,7 @@ function adicionarBoi() {
         vetEspecie.push(especieBoi);
 
         alert(`O boi com identificador ${identificadorBoi} foi adicionado ao sistema da fazenda com sucesso!
-        \nO boi da espécie ${especieBoi} apresentou um peso inicial de ${pesoInicialBoi} arrobas, e o seu peso final, após um período de engorda de 100 dias, foi de 
-        ${pesoFinalBoi} arrobas.`)
+        \nO boi da espécie ${especieBoi} apresentou um peso inicial de ${pesoInicialBoi} arrobas, e após um período de engorda de 100 dias, o seu peso final foi de ${pesoFinalBoi} arrobas.`)
 
         sessionStorage.setItem("vetID", JSON.stringify(vetID));
         sessionStorage.setItem("vetINI", JSON.stringify(vetINI));
@@ -111,23 +110,17 @@ function infoRemoverBoi() {
     var removerIdent = inIdentRemovBoi.value.toUpperCase();
     var validacaoIdent = /^[a-zA-Z0-9]+$/.test(removerIdent);
 
-    if (inIdentRemovBoi.value == "") {
-        alert("Atenção!\n\nDigite um identificador válido para remover um boi do sistema da fazenda.");
-        inIdentRemovBoi.focus();
-    } else if (!validacaoIdent) {
+    if (!validacaoIdent) {
         alert("Atenção!\n\nUtilize apenas letras e números para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
         inIdentRemovBoi.value = "";
         inIdentRemovBoi.focus();
-    } else if (removerIdent.length < 4) {
-        alert("Atenção!\n\nDigite 4 caracteres para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
-        inIdentRemovBoi.value = "";
-        inIdentRemovBoi.focus();
+        outRemoverBoi.innerHTML = "";
+        btRemoverBoi.style.display = "none";
 
     } else if (!vetID.includes(removerIdent)) {
         alert("Atenção!\n\nNenhum boi com este identificador foi encontrado no sistema da fazenda.\n\nTente Novamente.");
-        inIdentRemovBoi.value = "";
-        inIdentRemovBoi.focus();
-        outRemoverBoi.value = "";
+
+        location.reload();
     } else {
 
         for (var indBoi = 0; indBoi < vetID.length; indBoi++) {
@@ -142,5 +135,38 @@ function infoRemoverBoi() {
             }
         }
     }
+}
 
+btRemoverBoi.addEventListener("click", removerBoi);
+
+function removerBoi() {
+    var removerIdent = inIdentRemovBoi.value.toUpperCase();
+
+    const motivo = prompt("Digite o motivo da remoção:");
+
+    if (motivo !== null) {
+        const confirmacao = confirm(`Deseja finalizar a ação de remoção?\n\nMotivo: ${motivo}`);
+
+        if (confirmacao) {
+            for (var indBoi = 0; indBoi < vetID.length; indBoi++) {
+                if (removerIdent == vetID[indBoi]) {
+                    vetID.splice(indBoi, 1);
+                    vetEspecie.splice(indBoi, 1);
+                    vetINI.splice(indBoi, 1);
+                    vetFinal.splice(indBoi, 1);
+                }
+            }
+
+            sessionStorage.setItem("vetID", JSON.stringify(vetID));
+            sessionStorage.setItem("vetINI", JSON.stringify(vetINI));
+            sessionStorage.setItem("vetFinal", JSON.stringify(vetFinal));
+            sessionStorage.setItem("vetEspecie", JSON.stringify(vetEspecie));
+            
+            alert("Boi removido com sucesso!");
+
+            location.reload();
+        }
+    } else {
+        alert("Atencão!\n\nDigite o motivo de remover o boi do sistema.")
+    }
 }
