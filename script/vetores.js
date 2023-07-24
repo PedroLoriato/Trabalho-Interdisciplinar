@@ -19,6 +19,6 @@ if (!sessionStorage.getItem('dataStored')) {
     sessionStorage.setItem("vetFinal", JSON.stringify(vetFinal));
     sessionStorage.setItem("vetEspecie", JSON.stringify(vetEspecie));
 
-    // Marca que os dados foram armazenados
+    // Confirma que os dados foram armazenados
     sessionStorage.setItem('dataStored', 'true');
 }

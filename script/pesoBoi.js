@@ -30,19 +30,23 @@ function calcularPeso() {
     }
     switch (peso) {
         case "Maior":
-            for (var ind = 1; ind < vetFinal.length; ind++) {
-                if (vetFinal[ind] > vetFinal[indMaior]) {
-                    indMaior = ind;
-                    outMaiorPeso.innerHTML = `O Boi com maior peso foi de <span style="color: red;">${vetFinal[indMaior]} arrobas!</span>`
+            for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
+                if (vetFinal[indBoi] > vetFinal[indMaior]) {
+                    indMaior = indBoi;
+                    outMaiorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">maior peso final</span> foi identificado como 
+                    <span style="font-weight: bold;">${vetID[indMaior]}</span>, pertencente à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>.
+                    <br>Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} arrobas</span>.`
                 }
             }
             break;
 
         case "Menor":
-            for (var ind = 1; ind < vetFinal.length; ind++) {
-                if (vetFinal[ind] < vetFinal[indMenor]) {
-                    indMenor = ind;
-                    outMenorPeso.innerHTML = `O Boi com menor peso foi de <span style="color: blue;">${vetFinal[indMenor]} arrobas!</span>`
+            for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
+                if (vetFinal[indBoi] < vetFinal[indMenor]) {
+                    indMenor = indBoi;
+                    outMenorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">menor peso final</span> foi identificado como 
+                    <span style="font-weight: bold;">${vetID[indMenor]}</span>, pertencente à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>.
+                    <br>Ao final do período de  de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} arrobas</span>.`
                 }
             }
             break;

@@ -29,18 +29,18 @@ function adicionarBoi() {
 
 
     if (inIdentBoi.value == "") {
-        alert("Atenção!\nDigite um identificador válido para adicionar um novo boi ao sistema da fazenda.");
+        alert("Atenção!\n\nDigite um identificador válido para adicionar um novo boi ao sistema da fazenda.");
         inIdentBoi.focus();
     } else if (!validacaoIdent) {
-        alert("Atenção!\nUtilize apenas letras e números para criar um identificador para o boi a ser adicionado ao sistema da fazenda..");
+        alert("Atenção!\n\nUtilize apenas letras e números para criar um identificador para o boi a ser adicionado ao sistema da fazenda..");
         inIdentBoi.value = "";
         inIdentBoi.focus();
     } else if (identificadorBoi.length < 4) {
-        alert("Atenção!\nDigite 4 caracteres para criar o identificador para o boi a ser adicionado ao sistema da fazenda.");
+        alert("Atenção!\n\nDigite 4 caracteres para criar o identificador para o boi a ser adicionado ao sistema da fazenda.");
         inIdentBoi.value = "";
         inIdentBoi.focus();
     } else if (vetID.includes(identificadorBoi)) {
-        alert("Atenção!\nJá existe um boi com este identificador no sistema da fazenda.");
+        alert("Atenção!\n\nJá existe um boi com este identificador no sistema da fazenda.");
         inIdentBoi.value = "";
         inIdentBoi.focus();
 
@@ -49,26 +49,26 @@ function adicionarBoi() {
         sltEspecieBoi.focus();
 
     } else if (inPesoInicialBoi.value == "") {
-        alert("Atenção!\nDigite o peso inicial do boi a ser adicionado ao sistema da fazenda.");
+        alert("Atenção!\n\nDigite o peso inicial do boi a ser adicionado ao sistema da fazenda.");
         inPesoInicialBoi.focus();
     } else if (isNaN(pesoInicialBoi)) {
-        alert("Atenção.\nDigite apenas números para o peso incial do boi.");
+        alert("Atenção.\n\nDigite apenas números para o peso incial do boi.");
         inPesoInicialBoi.value = "";
         inPesoInicialBoi.focus();
     } else if (pesoInicialBoi > 13) {
-        alert("Atenção.\nO peso máximo permitido para o peso inicial é de 13 arrobas.");
+        alert("Atenção.\n\nO peso máximo permitido para o peso inicial é de 13 arrobas.");
         inPesoInicialBoi.value = "";
         inPesoInicialBoi.focus();
 
     } else if (inPesoFinalBoi.value == "") {
-        alert("Atenção!\nDigite o peso final do boi a ser adicionado ao sistema da fazenda.");
+        alert("Atenção!\n\nDigite o peso final do boi a ser adicionado ao sistema da fazenda.");
         inPesoFinalBoi.focus();
     } else if (isNaN(pesoFinalBoi)) {
-        alert("Atenção.\nDigite apenas números para o peso incial do boi.");
+        alert("Atenção.\n\nDigite apenas números para o peso incial do boi.");
         inPesoFinalBoi.value = "";
         inPesoFinalBoi.focus();
     } else if (pesoFinalBoi < 16) {
-        alert("Atenção.\nO peso mínimo permitido para o peso final é de 16 arrobas.");
+        alert("Atenção.\n\nO peso mínimo permitido para o peso final é de 16 arrobas.");
         inPesoFinalBoi.value = "";
         inPesoFinalBoi.focus();
 
