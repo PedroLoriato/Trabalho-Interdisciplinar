@@ -34,8 +34,8 @@ function calcularPeso() {
                 if (vetFinal[indBoi] > vetFinal[indMaior]) {
                     indMaior = indBoi;
                     outMaiorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">maior peso final</span> foi identificado como 
-                    <span style="font-weight: bold;">${vetID[indMaior]}</span>, pertencente à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>.
-                    <br>Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} arrobas</span>.`
+                    <span style="font-weight: bold;">${vetID[indMaior]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>. 
+                    Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} arrobas</span>.`
                 }
             }
             break;
@@ -45,8 +45,8 @@ function calcularPeso() {
                 if (vetFinal[indBoi] < vetFinal[indMenor]) {
                     indMenor = indBoi;
                     outMenorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">menor peso final</span> foi identificado como 
-                    <span style="font-weight: bold;">${vetID[indMenor]}</span>, pertencente à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>.
-                    <br>Ao final do período de  de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} arrobas</span>.`
+                    <span style="font-weight: bold;">${vetID[indMenor]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>. 
+                    Ao final do período de  de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} arrobas</span>.`
                 }
             }
             break;

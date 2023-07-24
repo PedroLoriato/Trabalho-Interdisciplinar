@@ -8,24 +8,22 @@ header {
     left: 0;
     background: linear-gradient(90deg, rgb(58, 195, 124), rgb(82, 222, 87));
     width: 100%;
-    height: 100px;
-    box-shadow: 0 5px 20px rgb(0, 0, 0);
+    height: 80px;
+    box-shadow: 0 1px 10px rgb(0, 0, 0);
     z-index: 2;
-    padding-bottom: 10px;
-    padding-top: 10px;
     display: flex;
     align-items: center;
 }
 
 
-header button{
+header button {
     background: none;
     border: none;
     cursor: pointer;
 }
 
 .caixaHeader {
-    width: 1024px;
+    width: 940px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -33,16 +31,19 @@ header button{
 }
 
 .caixaHeader img {
-    width: 120px;
-    border-radius: 0px;
+    width: 70px;
+    padding-top: 4px;
+    border-radius: none;
 }
 
 nav ul {
-    font-size: 20px;
+    font-size: 12px;
     display: flex;
     justify-content: center;
     list-style-type: none;
-    font-family: 'Caprasimo', cursive;
+    font-family: cursive;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 nav ul li {
@@ -63,11 +64,11 @@ header a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -4px;
     width: 0;
-    height: 4px;
+    height: 2px;
     background-color: rgb(2, 2, 2);
-    transition: width 0.4s ease-in-out;
+    transition: width 0.4s;
 }
 
 header a:hover::after {

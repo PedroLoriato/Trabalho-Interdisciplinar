@@ -10,20 +10,64 @@ body {
 
 main {
     position: relative;
-    margin-top: 100px;
+    margin-top: 80px;
     min-height: 100vh;
 }
 
-h1 {
+
+#secCarrossel {
+    scroll-margin-top: 80px;
+}
+
+#secCarrossel > h1 {
     font-size: 32px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: green;
 }
 
+#secCarrossel h3 {
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    color: rgba(22, 242, 22, 0.774);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.carrossel {
+    display: flex;
+    width: 940px;
+    height: 720px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.imagem {
+    position: absolute;
+    width: 520px;
+    height: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.carrossel_imagens {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 .textoCarrossel {
     position: absolute;
     display: none;
-    font-size: 20px;
+    font-size: 14px;
+    font-family: 'Merriweather Sans', sans-serif;
     width: 100%;
     height: 100%;
     text-align: justify;
@@ -37,47 +81,6 @@ h1 {
     opacity: 1;
 }
 
-h3 {
-    text-align: center;
-    color: rgb(22, 242, 22);
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-.imagem {
-    position: absolute;
-    width: 640px;
-    height: 360px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: transform 0.5s ease;
-    cursor: pointer;
-}
-
-#secCarrossel {
-    scroll-margin-top: 100px;
-}
-
-.carrossel {
-    width: 1280px;
-    height: 720px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    z-index: 1;
-}
-
-.carrossel_imagens {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
 img {
     width: 100%;
     height: 100%;
@@ -87,12 +90,12 @@ img {
 
 .seta {
     position: absolute;
-    top: 25%;
-    width: 30px;
-    height: 30px;
+    top: 20%;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     pointer-events: none;
-    background-color: rgba(255, 255, 255, 0.253);
+    background-color: rgb(255, 255, 255, 0.500);
     z-index: 1;
     padding: 10px;
     box-sizing: content-box;
@@ -101,11 +104,11 @@ img {
 }
 
 .anterior {
-    left: 100px;
+    left: 50px;
 }
 
 .proxima {
-    right: 100px;
+    right: 50px;
 }
 
 #item-1:checked~.carrossel_imagens #imagem-3,
