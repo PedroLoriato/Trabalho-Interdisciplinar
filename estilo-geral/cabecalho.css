@@ -41,7 +41,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    font-family: cursive;
+    font-family: 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
 }
