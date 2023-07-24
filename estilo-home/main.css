@@ -12,6 +12,7 @@ main {
     position: relative;
     margin-top: 80px;
     min-height: 100vh;
+    background: rgba(8, 242, 8, 0.216);
 }
 
 section {
@@ -22,7 +23,7 @@ section {
 
 /*-------- Section Nossa Fazenda ---------- */
 
-.sobreFazenda > h1 {
+.sobreFazenda>h1 {
     font-size: 32px;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -34,7 +35,7 @@ section {
     align-items: center;
 }
 
-.imgMissao{
+.imgMissao {
     display: inline-block;
     height: 200px;
     width: 200px;
@@ -45,9 +46,9 @@ section {
     margin-left: 50px;
 }
 
-.textoMissao{
-    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif; 
-    font-size: 15px; 
+.textoMissao {
+    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif;
+    font-size: 15px;
     font-weight: bold;
     line-height: 1.5;
     text-align: justify;
@@ -69,7 +70,7 @@ section {
     margin: 40px 0;
 }
 
-.infraTextoFazenda{
+.infraTextoFazenda {
     display: inline-block;
     margin-right: 50px;
 }
@@ -83,15 +84,15 @@ section {
     color: #18350f;
 }
 
-.imgInfraestrutura{
+.imgInfraestrutura {
     display: inline-block;
     height: 200px;
     width: 200px;
 }
 
-.infraTexto{
-    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif; 
-    font-size: 15px; 
+.infraTexto {
+    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif;
+    font-size: 15px;
     font-weight: bold;
     line-height: 1.5;
     text-align: justify;
@@ -131,7 +132,7 @@ section {
     scroll-margin-top: 80px;
 }
 
-#secCarrossel > h1 {
+#secCarrossel>h1 {
     font-size: 32px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: green;

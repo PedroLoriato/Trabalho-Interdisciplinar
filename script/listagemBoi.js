@@ -27,13 +27,15 @@ function mostrarLista() {
         sltFiltroBoi.focus()
     } else {
         for (var indBoi = 0; indBoi < vetID.length; indBoi++) {
+            var prcGanhoPeso = ((vetFinal[indBoi] - vetINI[indBoi]) / vetINI[indBoi] * 100);
+
             if (listagemBoi == "Todos" || vetEspecie[indBoi] == listagemBoi) {
                 outPesqBoi.innerHTML += `<br> O Boi com Identificador <span style="font-weight: bold; color: red;">${vetID[indBoi]}</span>, 
                     da espécie <span style="font-weight: bold;">${vetEspecie[indBoi]}</span>, chegou à fazenda com peso inicial de 
                     <span style="font-weight: bold; color: green">${vetINI[indBoi]} arrobas</span>, 
                     e ao final do Período de Engorda de 100 dias, ficou com um peso final de <span style="font-weight: bold; color: green">${vetFinal[indBoi]} 
                     arrobas</span>, adquirindo um ganho de peso de <span style="font-weight: bold; color: blue">
-                    ${((vetFinal[indBoi] - vetINI[indBoi]) / vetINI[indBoi] * 100).toFixed(0)}%</span>.<br>`;
+                    ${prcGanhoPeso.toFixed(0)}%</span>.<br>`;
             }
         }
     }

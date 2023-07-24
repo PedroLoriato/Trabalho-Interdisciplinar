@@ -17,8 +17,8 @@
     align-items: center;
     text-align: center;
 }
- 
-.banner > #titleMain {
+
+.banner>#titleMain {
     color: rgb(40, 221, 0);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 120px;
@@ -43,7 +43,7 @@
     }
 }
 
-.banner >  #titleDesc {
+.banner>#titleDesc {
     color: rgb(255, 255, 255);
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

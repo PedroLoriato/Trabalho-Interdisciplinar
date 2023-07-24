@@ -32,7 +32,7 @@ function adicionarBoi() {
         alert("Atenção!\n\nDigite um identificador válido para adicionar um novo boi ao sistema da fazenda.");
         inIdentBoi.focus();
     } else if (!validacaoIdent) {
-        alert("Atenção!\n\nUtilize apenas letras e números para criar um identificador para o boi a ser adicionado ao sistema da fazenda..");
+        alert("Atenção!\n\nUtilize apenas letras e números para criar um identificador para o boi a ser adicionado ao sistema da fazenda.");
         inIdentBoi.value = "";
         inIdentBoi.focus();
     } else if (identificadorBoi.length < 4) {
@@ -57,6 +57,11 @@ function adicionarBoi() {
         inPesoInicialBoi.focus();
     } else if (pesoInicialBoi > 13) {
         alert("Atenção.\n\nO peso máximo permitido para o peso inicial é de 13 arrobas.");
+        inPesoInicialBoi.value = "";
+        inPesoInicialBoi.focus();
+    }
+    else if (pesoInicialBoi <= 0) {
+        alert("Atenção.\n\nDigite um peso válido para o peso inicial do boi.");
         inPesoInicialBoi.value = "";
         inPesoInicialBoi.focus();
 
@@ -119,7 +124,7 @@ function infoRemoverBoi() {
 
     } else if (!vetID.includes(removerIdent)) {
         alert("Atenção!\n\nNenhum boi com este identificador foi encontrado no sistema da fazenda.\n\nTente Novamente.");
-
+        outRemoverBoi.innerHTML = "";
         location.reload();
     } else {
 
@@ -129,7 +134,7 @@ function infoRemoverBoi() {
                 <p>Espécie: <span style="font-weight: bold;">${vetEspecie[indBoi]}</span></p>
                 <p>Peso inicial: <span style="font-weight: bold;"> ${vetINI[indBoi]} arrobas</span></p>
                 <p>Peso Final: <span style="font-weight: bold;">${vetFinal[indBoi]} arrobas</span></p>
-                <p> Período de Engorda: 100 dias.</p>`;
+                <p> Período de Engorda: <span style="font-weight: bold;">100 dias.</span></p>`;
 
                 btRemoverBoi.style.display = "inline-block";
             }
@@ -141,32 +146,54 @@ btRemoverBoi.addEventListener("click", removerBoi);
 
 function removerBoi() {
     var removerIdent = inIdentRemovBoi.value.toUpperCase();
+    var validacaoIdent = /^[a-zA-Z0-9]+$/.test(removerIdent);
 
-    const motivo = prompt("Digite o motivo da remoção:");
+    if (!validacaoIdent) {
+        alert("Atenção!\n\nUtilize apenas letras e números para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
+        inIdentRemovBoi.value = "";
+        inIdentRemovBoi.focus();
+        outRemoverBoi.innerHTML = "";
+        btRemoverBoi.style.display = "none";
 
-    if (motivo !== null) {
-        const confirmacao = confirm(`Deseja finalizar a ação de remoção?\n\nMotivo: ${motivo}`);
+    } else if (removerIdent.length < 4) {
+        alert("Atenção!\n\nDigite 4 caracteres para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
+        inIdentBoi.value = "";
+        inIdentBoi.focus();
+        outRemoverBoi.innerHTML = "";
+        btRemoverBoi.style.display = "none";
 
-        if (confirmacao) {
-            for (var indBoi = 0; indBoi < vetID.length; indBoi++) {
-                if (removerIdent == vetID[indBoi]) {
-                    vetID.splice(indBoi, 1);
-                    vetEspecie.splice(indBoi, 1);
-                    vetINI.splice(indBoi, 1);
-                    vetFinal.splice(indBoi, 1);
-                }
-            }
-
-            sessionStorage.setItem("vetID", JSON.stringify(vetID));
-            sessionStorage.setItem("vetINI", JSON.stringify(vetINI));
-            sessionStorage.setItem("vetFinal", JSON.stringify(vetFinal));
-            sessionStorage.setItem("vetEspecie", JSON.stringify(vetEspecie));
-            
-            alert("Boi removido com sucesso!");
-
-            location.reload();
-        }
+    } else if (!vetID.includes(removerIdent)) {
+        alert("Atenção!\n\nNenhum boi com este identificador foi encontrado no sistema da fazenda.\n\nTente Novamente.");
+        outRemoverBoi.innerHTML = "";
+        btRemoverBoi.style.display = "none";
+        location.reload();
     } else {
-        alert("Atencão!\n\nDigite o motivo de remover o boi do sistema.")
+        const motivo = prompt("Digite o motivo da remoção:");
+
+        if (motivo !== null) {
+            const confirmacao = confirm(`Deseja finalizar a ação de remoção?\n\nMotivo: ${motivo}`);
+
+            if (confirmacao) {
+                for (var indBoi = 0; indBoi < vetID.length; indBoi++) {
+                    if (removerIdent == vetID[indBoi]) {
+                        vetID.splice(indBoi, 1);
+                        vetEspecie.splice(indBoi, 1);
+                        vetINI.splice(indBoi, 1);
+                        vetFinal.splice(indBoi, 1);
+                    }
+                }
+
+                sessionStorage.setItem("vetID", JSON.stringify(vetID));
+                sessionStorage.setItem("vetINI", JSON.stringify(vetINI));
+                sessionStorage.setItem("vetFinal", JSON.stringify(vetFinal));
+                sessionStorage.setItem("vetEspecie", JSON.stringify(vetEspecie));
+
+                alert("Boi removido com sucesso!");
+
+                location.reload();
+            }
+        } else {
+            alert("Atencão!\n\nDigite o motivo de remover o boi do sistema.")
+        }
     }
 }

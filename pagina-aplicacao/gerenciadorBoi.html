@@ -31,17 +31,16 @@
     <main id="principal">
         <section class="gerenciadorBoi">
             <h1>GERENCIADOR DOS BOIS</h1>
-            <p>Gerenciador dos bois da fazenda para adicionar um novo boi, com sua identificação e demais informações,
-            </p>
-            <p>e/ou remover bois do sistema da fazenda.</p>
+            <p>Gerenciador dos bois da fazenda para adicionar um novo boi, com sua identificação e demais
+                informações,<br> e/ou remover bois do sistema da fazenda.</p>
 
             <fieldset class="adicionarBoi">
                 <h2>ADICIONAR BOI</h2>
-                <label for="identificadorBoi">Idenficador do Boi:
+                <label for="identificadorBoi">IDENTIFICADOR
                     <input type="text" name="identificadorBoi" id="inIdentBoi" minlength="4" maxlength="4"
                         title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
                 </label>
-                <label for="especieBoi">Espécie do Boi:
+                <label for="especieBoi">ESPÉCIE
                     <select name="especieBoi" id="sltEspecieBoi">
                         <option value="" selected disabled>Selecione uma espécie</option>
                         <option value="Angus">Angus</option>
@@ -49,23 +48,23 @@
                         <option value="Nelore">Nelore</option>
                     </select>
                 </label>
-                <label for="">Peso Inicial:
+                <label for="">PESO INICIAL
                     <input type="text" name="" id="inPesoInicialBoi" minlength="1" maxlength="2"
                         title="Peso Máximo: 13 arrobas | Utilize somente números."
                         placeholder="Digite o peso em arrobas">
                 </label>
-                <label for="">Peso Final:
+                <label for="">PESO FINAL
                     <input type="text" name="" id="inPesoFinalBoi" minlength="2" maxlength="2"
                         title="Peso Mínimo: 16 arrobas | Utilize somente números."
                         placeholder="Digite o peso em arrobas">
                 </label>
-                <p>Período: 100 dias</p>
+                <p>Período de engorda: 100 dias</p>
                 <input type="button" value="ADICIONAR" id="btAdicionarBoi">
             </fieldset>
 
             <fieldset class="removerBoi">
                 <h2>REMOVER BOI</h2>
-                <label for="identificadorBoi">Idenficador do Boi:
+                <label for="identificadorBoi">IDENTIFICADOR
                     <input type="text" name="identificadorBoi" id="inIdentRemovBoi" minlength="4" maxlength="4"
                         title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
                 </label>

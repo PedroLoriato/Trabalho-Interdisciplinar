@@ -30,16 +30,50 @@
 
     <main id="principal">
         <section class="filtroPesoBoi">
+
             <h1>PESO DOS BOIS</h1>
-            <p>Filtro para pesquisar o Boi com Maior ou Menor Peso, após o período de engorda.</p>
-            <select id="sltPesoBoi">
-                <option value="" disabled selected>Selecione um filtro:</option>
-                <option value="Maior">Maior Peso</option>
-                <option value="Menor">Menor Peso</option>
-            </select>
-            <input type="button" id="btFiltrarPeso" value="FILTRAR">
-            <p id="outMaiorPeso"></p>
-            <p id="outMenorPeso"></p>
+            <p>Filtro para pesquisar informações sobre o peso dos bois, sendo:<br>Boi com Maior e Menor Peso,
+                percentual de ganho de peso de determinado boi e boi com
+                menor ganho de peso. </p>
+
+            <fieldset class="pesoMaiorMenor">
+                <h2>PESO FINAL</h2>
+                <p>Filtro para pesquisar o boi que alcançou o maior peso final e o menor peso final, após o período de
+                    engorda de 100 dias.</p>
+                <select id="sltPesoBoi">
+                    <option value="" disabled selected>Selecione um filtro:</option>
+                    <option value="Maior">Maior Peso</option>
+                    <option value="Menor">Menor Peso</option>
+                </select>
+                <input type="button" id="btFiltrarPeso" value="FILTRAR">
+                <p id="outMaiorPeso"></p>
+                <p id="outMenorPeso"></p>
+            </fieldset>
+
+            <fieldset class="prcPesoBoi">
+                <h2>GANHO DE PESO PERCENTUAL</h2>
+                <p>Filtro para pesquisar o percentual de ganho de peso de determinado boi, utilizando seu identificador.
+                </p>
+                <label for="identificadorBoi">IDENTIFICADOR
+                    <input type="text" name="identificadorBoi" id="inIdentBoi" minlength="4" maxlength="4"
+                        title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
+                </label>
+                <input type="button" id="btFiltrarPrc" value="FILTRAR">
+                <p id="outPrcPeso"></p>
+            </fieldset>
+
+            <fieldset class="ganhoPeso">
+                <h2>GANHO DE PESO ABSOLUTO</h2>
+                <p>Filtro para pesquisar os dados do boi com maior e menor ganho de peso absoluto.</p>
+                <select id="sltGanhoPeso">
+                    <option value="" disabled selected>Selecione um filtro:</option>
+                    <option value="Maior">Maior Peso</option>
+                    <option value="Menor">Menor Peso</option>
+                </select>
+                <input type="button" id="btFiltrarGanho" value="FILTRAR">
+                <p id="outMaiorGanho"></p>
+                <p id="outMenorGanho"></p>
+            </fieldset>
         </section>
     </main>
 

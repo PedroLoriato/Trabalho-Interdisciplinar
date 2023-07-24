@@ -19,6 +19,7 @@ main {
     min-height: 100vh;
     text-align: center;
     scroll-margin-top: 100px;
+    background: rgba(8, 242, 8, 0.216);
 }
 
 h1 {
@@ -28,11 +29,29 @@ h1 {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 25px;
+    background: linear-gradient(90deg, #025002, rgb(13, 243, 48));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 /*----- Página Listagem dos Bois e Peso dos Bois | Botão de Filtrar ------*/
 #btFiltrarBoi,
-#btFiltrarPeso {
+#btFiltrarPeso,
+#btFiltrarPrc,
+#btFiltrarGanho {
     padding: 10px;
     font-family: Verdana, sans-serif;
     border-radius: 5px;
@@ -42,9 +61,15 @@ h1 {
     transition: background-color box-shadow 0.2s ease-in-out;
 }
 
+#btFiltrarPrc {
+    margin-top: 20px;
+}
+
 #btFiltrarBoi:hover,
-#btFiltrarPeso:hover {
-    box-shadow: 0 0 0 2px rgb(35, 252, 6);
+#btFiltrarPeso:hover,
+#btFiltrarPrc:hover,
+#btFiltrarGanho:hover {
+    box-shadow: 0 0 5px 1px rgb(35, 252, 6);
 }
 
 #btFiltrarBoi:active,
@@ -55,18 +80,20 @@ h1 {
 
 /*----- Página Listagem dos Bois e Peso dos Bois | Seletor de Filtrar ------*/
 #sltFiltroBoi,
-#sltPesoBoi {
+#sltPesoBoi,
+#sltGanhoPeso {
     padding: 10px;
     font-family: Verdana, sans-serif;
-    background: rgb(10, 234, 10);
-    border-radius: 20px;
+    background: rgb(83, 255, 83);
+    border: none;
+    border-radius: 10px;
     text-align: center;
     cursor: pointer;
 }
 
 #sltFiltroBoi>option,
 #sltPesoBoi>option {
-    background: rgb(10, 234, 10);
+    background: rgb(83, 255, 83);
 }
 
 /*----- Página Listagem dos Bois, Peso dos Bois e Gerenciador dos Bois | Section das aplicações ------*/
@@ -89,14 +116,50 @@ h1 {
 #outPesqBoi {
     font-size: 15px;
     text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.5;
     margin-bottom: 10px;
 }
 
-/*----- Página Peso dos Bois | Saida do Filtro Maior/Menor Peso Final ------*/
+/*----- Página Peso dos Bois ------*/
+
+.pesoMaiorMenor,
+.prcPesoBoi,
+.ganhoPeso {
+    border: 2px solid green;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.prcPesoBoi label {
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.prcPesoBoi input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(83, 255, 83);
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
 #outMaiorPeso,
-#outMenorPeso {
+#outMenorPeso,
+#outPrcPeso,
+#outMaiorGanho,
+#outMenorGanho {
     font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: justify;
     line-height: 1.5;
     margin-top: 20px;
@@ -108,7 +171,13 @@ h1 {
     width: 300px;
     height: 350px;
     margin: 0 auto;
-    margin-top: 20px;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.adicionarBoi>p {
+    font-size: 12px;
 }
 
 .adicionarBoi>label,
@@ -122,15 +191,29 @@ h1 {
 .adicionarBoi>label>input,
 .removerBoi>label>input {
     width: 200px;
-    height: 20px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
     text-align: center;
+    background: rgb(83, 255, 83);
 }
+
+.adicionarBoi>label {
+    width: 200px;
+    margin: 10px auto;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 
 .adicionarBoi>label>select,
 .removerBoi>label>select {
     width: 200px;
-    height: 20px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
     text-align: center;
+    background: rgb(83, 255, 83);
 }
 
 .removerBoi {
@@ -138,16 +221,48 @@ h1 {
     width: 300px;
     height: 350px;
     vertical-align: top;
+    border: 2px solid green;
+    border-radius: 10px;
     margin: 0 auto;
-    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
-.removerBoi>p {
-    font-size: 15px;
+.adicionarBoi>h2 {
+    background: linear-gradient(90deg, #0044fff7, rgba(4, 198, 241, 0.919));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.removerBoi>h2 {
+    background: linear-gradient(90deg, #860000, rgb(255, 0, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.removerBoi>label {
+    width: 200px;
+    margin: 10px auto;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.removerBoi p {
+    font-size: 13px;
+    margin: 10px;
     line-height: 1.5;
-    text-align: justify;
+}
+
+#outRemoverBoi {
+    margin: 0;
 }
 
 #btRemoverBoi {
     display: none;
+    margin-top: 15px;
 }
