@@ -1,4 +1,4 @@
-/*-----------------Paginas da aplicação------------*/
+/*----------------- Páginas da Aplicação -------------------*/
 
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 
@@ -32,7 +32,7 @@ h1 {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-/*-----Pagina Listagem dos Bois e Peso dos Bois | Botão de Filtrar ------  */
+/*----- Página Listagem dos Bois e Peso dos Bois | Botão de Filtrar ------*/
 #btFiltrarBoi,
 #btFiltrarPeso {
     padding: 10px;
@@ -55,7 +55,7 @@ h1 {
     box-shadow: 0 0 0 2px rgb(255, 255, 255);
 }
 
-/*-----Pagina Listagem dos Bois e Peso dos Bois | Seletor de Filtrar ------  */
+/*----- Página Listagem dos Bois e Peso dos Bois | Seletor de Filtrar ------*/
 #sltFiltroBoi,
 #sltPesoBoi {
     padding: 10px;
@@ -71,7 +71,7 @@ h1 {
     background: rgb(10, 234, 10);
 }
 
-/*-----Pagina Listagem dos Bois, Peso dos Bois e Gerenciador dos Bois | Section das aplicações------  */
+/*----- Página Listagem dos Bois, Peso dos Bois e Gerenciador dos Bois | Section das aplicações ------*/
 .listagemBoi,
 .filtroPesoBoi,
 .gerenciadorBoi {
@@ -87,7 +87,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/*-----Pagina Listagem dos Bois | Saida da listagem------  */
+/*------- Página Listagem dos Bois | Saida da listagem --------*/
 #outPesqBoi {
     font-size: 15px;
     text-align: justify;
@@ -95,7 +95,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-/*-----Pagina Peso dos Bois | Saida do Filtro Maior/Menor Peso Final------  */
+/*----- Página Peso dos Bois | Saida do Filtro Maior/Menor Peso Final ------*/
 #outMaiorPeso,
 #outMenorPeso {
     font-size: 15px;
@@ -104,7 +104,7 @@ h1 {
     margin-top: 20px;
 }
 
-/*---------------Pagina Gerenciador dos Bois------------------*/
+/*--------------- Página Gerenciador dos Bois ------------------*/
 .adicionarBoi {
     display: inline-block;
     width: 300px;
