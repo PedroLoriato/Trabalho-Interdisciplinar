@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../estilo-geral/cabecalho.css">
     <link rel="stylesheet" href="../estilo-geral/footer.css">
     <link rel="shortcut icon" href="../icones/logo.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
     <title>Peso do Boi</title>
 </head>
 
@@ -40,8 +39,8 @@
                     <input type="text" name="identificadorBoi" id="inIdentBoi" minlength="4" maxlength="4"
                         title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
                 </label>
-                <label for="especieBoi">ESPÉCIE
-                    <select name="especieBoi" id="sltEspecieBoi">
+                <label for="boiEspecie">ESPÉCIE
+                    <select name="boiEspecie" id="sltEspecieBoi">
                         <option value="" selected disabled>Selecione uma espécie</option>
                         <option value="Angus">Angus</option>
                         <option value="Hereford">Hereford</option>
@@ -59,7 +58,7 @@
                         placeholder="Digite o peso em arrobas">
                 </label>
                 <p>Período de engorda: 100 dias</p>
-                <input type="button" value="ADICIONAR" id="btAdicionarBoi">
+                <button id="btAdicionarBoi">ADICIONAR<img class="botaoBoi" src="../icones/botaoBoi.png" alt="ícone de rosto de boi para o botão"></button>
             </fieldset>
 
             <fieldset class="removerBoi">
@@ -69,7 +68,7 @@
                         title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
                 </label>
                 <p id="outRemoverBoi"></p>
-                <input type="button" value="REMOVER" id="btRemoverBoi">
+                <button id="btRemoverBoi">REMOVER<img class="botaoBoi" src="../icones/botaoBoi.png" alt="ícone de rosto de boi para o botão"></button>
             </fieldset>
     </main>
 

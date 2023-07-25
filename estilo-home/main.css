@@ -11,8 +11,9 @@ body {
 main {
     position: relative;
     margin-top: 80px;
+    padding-bottom: 20px;
     min-height: 100vh;
-    background: rgba(8, 242, 8, 0.216);
+    background: rgba(165, 242, 159, 0.34);
 }
 
 section {
@@ -22,6 +23,10 @@ section {
 }
 
 /*-------- Section Nossa Fazenda ---------- */
+
+#secSobreFazenda {
+    scroll-margin-top: 100px;
+}
 
 .sobreFazenda>h1 {
     font-size: 32px;
@@ -150,7 +155,7 @@ input[type="radio"] {
 
 .carrossel {
     display: flex;
-    height: 600px;
+    height: 420px;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
@@ -202,7 +207,7 @@ img {
 
 .seta {
     position: absolute;
-    top: 25%;
+    top: 40%;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -272,4 +277,101 @@ img {
 #item-3:checked~.carrossel_imagens #imagem-3 .textoCarrossel:hover {
     transition: 0.5s all;
     opacity: 0;
+}
+
+/*------------------------- Section Nosso Gado ----------------------------*/
+
+#secSobreGado {
+    text-align: center;
+    scroll-margin-top: 100px;
+}
+
+#secSobreGado>h1 {
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: green;
+}
+
+.sobreGado>p {
+    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.sobreGado>h3 {
+    font-size: 35px;
+    margin-bottom: 0;
+    font-family: "Helvetica Bold", Arial, Tahoma, sans-serif;
+    color: #18350f;
+    text-align: left;
+}
+
+.sobreGado h4 {
+    display: inline-block;
+    font-size: 30px;
+    font-family: "Helvetica Bold", Arial, Tahoma, sans-serif;
+    color: #18350f;
+    margin: 0;
+}
+
+.caixaEspecies {
+    display: inline-block;
+    text-align: center;
+    justify-content: space-evenly;
+    vertical-align: top;
+    width: 300px;
+    padding: 10px;
+}
+
+.sobreEspecies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+}
+
+.caixaEspecies>p {
+    display: inline-block;
+    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+}
+
+.sobreTotalBois {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#outBoisTotal {
+    display: inline-block;
+    font-family: "Helvetica Roman", Arial, Tahoma, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.totalBois {
+    width: 200px;
+}
+
+.icone-boi {
+    display: inline-block;
+    width: 50px;
+    object-fit: contain;
+    border-radius: none;
+}
+
+.angus,
+.nelore {
+    width: 60px;
 }

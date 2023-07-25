@@ -1,26 +1,41 @@
 /*
-Descrição:
+Descrição: Este código é uma aplicação em javascript que realiza a pesquisa informações sobre o peso dos bois, sendo: 
+boi com maior e menor peso, percentual de ganho de peso de determinado boi e boi com menor ganho de peso.
 
+Grupo 4: Gerenciamento de uma fazenda de engorda de boi
 
-Versão: 2.0 
+Integrantes:
+
+André Boecker Sobrinho
+Laélio Júnior
+Lucas Miguel Lirio Nascimento
+Luiz Felipe Föeger dos Santos
+Rickelmy Freitas dos Santos
+Pedro Henrique Loriato
+
+Versão: 1.0 
 */
 
+// Recupera os dados dos bois armazenados na sessionStorage
 vetID = JSON.parse(sessionStorage.getItem("vetID"));
 vetINI = JSON.parse(sessionStorage.getItem("vetINI"));
 vetFinal = JSON.parse(sessionStorage.getItem("vetFinal"));
 vetEspecie = JSON.parse(sessionStorage.getItem("vetEspecie"));
 
-// Aplicação de pesquisar o boi que alcançou o maior peso final e o menor peso final, após o período de engorda de 100.
+// Elementos do DOM relacionados à aplicação do boi com maior e menor peso final
 const sltPesoBoi = document.getElementById("sltPesoBoi");
 const btFiltrarPeso = document.getElementById("btFiltrarPeso");
 const outMaiorPeso = document.getElementById("outMaiorPeso");
 const outMenorPeso = document.getElementById("outMenorPeso");
 
+// Evento de clique no botão para calcular os pesos
 btFiltrarPeso.addEventListener("click", calcularPeso);
 
+// Função para pesquisar o boi com maior peso e o com menor peso
 function calcularPeso() {
     var peso = sltPesoBoi.value;
 
+    // Variáveis para armazenar os índices do boi com maior e menor peso final
     var indMaior = 0;
     var indMenor = 0;
 
@@ -28,14 +43,13 @@ function calcularPeso() {
         alert("Por favor, selecione um filtro para pesquisar o Boi!");
         sltPeso.focus();
     } else {
-
         if (peso == "Maior") {
             for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
                 if (vetFinal[indBoi] > vetFinal[indMaior]) {
                     indMaior = indBoi;
                     outMaiorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">maior peso final</span> foi identificado como 
                     <span style="font-weight: bold;">${vetID[indMaior]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>. 
-                    Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} arrobas</span>.`
+                    Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} arrobas</span>.`;
                 }
             }
         } else {
@@ -44,7 +58,7 @@ function calcularPeso() {
                     indMenor = indBoi;
                     outMenorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">menor peso final</span> foi identificado como 
                     <span style="font-weight: bold;">${vetID[indMenor]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>. 
-                    Ao final do período de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} arrobas</span>.`
+                    Ao final do período de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} arrobas</span>.`;
                 }
             }
         }
@@ -53,12 +67,15 @@ function calcularPeso() {
 
 // Aplicação de pesquisar o percentual de ganho de peso de determinado boi, utilizando seu identificador.
 
+// Declaração das variáveis do DOM relacionadas à aplicação do percentual de ganho de peso de determinado boi, utilizando seu identificador.
 const inIdentBoi = document.getElementById("inIdentBoi");
 const btFiltrarPrc = document.getElementById("btFiltrarPrc");
 const outPrcPeso = document.getElementById("outPrcPeso");
 
+// Evento de clique no botão para filtrar o percentual de ganho de peso
 btFiltrarPrc.addEventListener("click", filtrarPrcPeso);
 
+// Função para pesquisar o percentual de ganho de peso de determinado boi
 function filtrarPrcPeso() {
     var identificadorBoi = inIdentBoi.value.toUpperCase();
     var validacaoIdent = /^[a-zA-Z0-9]+$/.test(identificadorBoi);
@@ -100,13 +117,16 @@ function filtrarPrcPeso() {
 
 // Aplicação de pesquisar os dados do boi com maior e menor ganho de peso absoluto.
 
+// Declaração das variáveis do DOM relacionadas à aplicação dos dados do boi com maior e menor ganho de peso absoluto.
 const sltGanhoPeso = document.getElementById("sltGanhoPeso");
 const btFiltrarGanho = document.getElementById("btFiltrarGanho");
 const outMaiorGanho = document.getElementById("outMaiorGanho");
 const outMenorGanho = document.getElementById("outMenorGanho");
 
+// Evento de clique no botão para filtrar os dados do boi com maior e menor ganho de peso absoluto.
 btFiltrarGanho.addEventListener("click", filtrarGanhoPeso);
 
+// Função para pesquisar os dados do boi com maior e menor ganho de peso absoluto.
 function filtrarGanhoPeso() {
     var ganhoPeso = sltGanhoPeso.value;
 
