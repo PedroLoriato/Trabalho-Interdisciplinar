@@ -19,7 +19,7 @@ main {
     min-height: 100vh;
     text-align: center;
     scroll-margin-top: 100px;
-    background: rgba(165, 242, 159, 0.34);
+    background: rgba(8, 242, 8, 0.216);
 }
 
 h1 {
@@ -75,7 +75,7 @@ p {
 #btFiltrarBoi:active,
 #btFiltrarPeso:active {
     background-color: rgba(1, 255, 1, 0.589);
-    box-shadow: none;
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
 }
 
 /*----- Página Listagem dos Bois e Peso dos Bois | Seletor de Filtrar ------*/
@@ -247,13 +247,8 @@ p {
     cursor: pointer;
 }
 
-#btAdicionarBoi:hover {
-    box-shadow: 0px 0px 5px 0px rgb(0, 18, 183);
-}
-
-#btAdicionarBoi:active {
-    background: rgb(0, 117, 143);
-    box-shadow: none;
+#btRemoverBoi:hover {
+    box-shadow: 0px 0px 5px 2px rgb(23, 0, 154);
 }
 
 #btAdicionarBoi>.botaoBoi {
@@ -303,12 +298,7 @@ p {
 }
 
 #btRemoverBoi:hover {
-    box-shadow: 0px 0px 5px 0px rgb(154, 0, 0);
-}
-
-#btRemoverBoi:active {
-    background: rgb(192, 2, 2);
-    box-shadow: none;
+    box-shadow: 0px 0px 5px 2px rgb(154, 0, 0);
 }
 
 #btRemoverBoi>.botaoBoi {
