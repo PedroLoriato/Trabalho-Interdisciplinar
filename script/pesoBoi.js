@@ -44,22 +44,54 @@ function calcularPeso() {
         sltPeso.focus();
     } else {
         if (peso == "Maior") {
+            // Inicialize a lista de índices com o primeiro boi, que será o primeiro valor máximo encontrado.
+            var indicesMaioresPesos = [0];
+            var maiorPeso = vetFinal[0];
+
             for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
-                if (vetFinal[indBoi] > vetFinal[indMaior]) {
-                    indMaior = indBoi;
-                    outMaiorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">maior peso final</span> foi identificado como 
-                    <span style="font-weight: bold;">${vetID[indMaior]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>. 
-                    Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} arrobas</span>.`;
+                if (vetFinal[indBoi] > maiorPeso) {
+                    // Se encontrarmos um valor maior, atualizamos a lista de índices e o valor máximo.
+                    indicesMaioresPesos = [indBoi];
+                    maiorPeso = vetFinal[indBoi];
+                } else if (vetFinal[indBoi] === maiorPeso) {
+                    // Se encontrarmos outro valor igual ao maior peso, adicionamos seu índice à lista.
+                    indicesMaioresPesos.push(indBoi);
                 }
             }
+
+            // Agora que temos a lista de índices dos bois com maior peso final, podemos exibir as informações.
+            outMaiorPeso.innerHTML = '';
+            for (var i = 0; i < indicesMaioresPesos.length; i++) {
+                var indMaior = indicesMaioresPesos[i];
+                outMaiorPeso.innerHTML += `Um Boi que alcançou o <span style="font-weight: bold;">maior peso final</span> foi identificado como 
+                <span style="font-weight: bold;">${vetID[indMaior]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>. 
+                Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: red;">${vetFinal[indMaior]} 
+                arrobas.</span><br>`;
+            }
         } else {
+            // Inicialize a lista de índices com o primeiro boi, que será o primeiro valor mínimo encontrado.
+            var indicesMenoresPesos = [0];
+            var menorPeso = vetFinal[0];
+
             for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
-                if (vetFinal[indBoi] < vetFinal[indMenor]) {
-                    indMenor = indBoi;
-                    outMenorPeso.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">menor peso final</span> foi identificado como 
-                    <span style="font-weight: bold;">${vetID[indMenor]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>. 
-                    Ao final do período de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} arrobas</span>.`;
+                if (vetFinal[indBoi] < menorPeso) {
+                    // Se encontrarmos um valor menor, atualizamos a lista de índices e o valor mínimo.
+                    indicesMenoresPesos = [indBoi];
+                    menorPeso = vetFinal[indBoi];
+                } else if (vetFinal[indBoi] === menorPeso) {
+                    // Se encontrarmos outro valor igual ao menor peso, adicionamos seu índice à lista.
+                    indicesMenoresPesos.push(indBoi);
                 }
+            }
+
+            // Agora que temos a lista de índices dos bois com menor peso final, podemos exibir as informações.
+            outMenorPeso.innerHTML = '';
+            for (var i = 0; i < indicesMenoresPesos.length; i++) {
+                var indMenor = indicesMenoresPesos[i];
+                outMenorPeso.innerHTML += `Um Boi que alcançou o <span style="font-weight: bold;">menor peso final</span> foi identificado como 
+                <span style="font-weight: bold;">${vetID[indMenor]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>. 
+                Ao final do período de engorda de 100 dias, esse boi atingiu o peso de <span style="font-weight: bold; color: blue;">${vetFinal[indMenor]} 
+                arrobas.</span><br>`;
             }
         }
     }
@@ -112,7 +144,6 @@ function filtrarPrcPeso() {
             }
         }
     }
-
 }
 
 // Aplicação de pesquisar os dados do boi com maior e menor ganho de peso absoluto.
@@ -141,28 +172,58 @@ function filtrarGanhoPeso() {
         sltGanhoPeso.focus();
     } else {
         if (ganhoPeso == "Maior") {
-            for (var indBoi = 0; indBoi < vetFinal.length; indBoi++) {
-                var verificarGanho = vetFinal[indBoi] - vetINI[indBoi];
-                if (verificarGanho > maiorGanho) {
-                    maiorGanho = verificarGanho;
-                    indMaior = indBoi;
-                    outMaiorGanho.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">maior ganho de peso absoluto</span> foi identificado como 
-                    <span style="font-weight: bold;">${vetID[indMaior]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>. 
-                    Ao final do período de engorda de 100 dias, esse boi obteve um ganho de peso de 
-                    <span style="font-weight: bold; color: red;">${maiorGanho} arrobas</span>`;
-                }
-            }
-        } else {
+            // Inicialize a lista de índices com o primeiro boi, que será o primeiro valor máximo encontrado.
+            var indicesMaioresGanhos = [0];
+            var maiorGanho = vetFinal[0] - vetINI[0];
+
             for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
                 var verificarGanho = vetFinal[indBoi] - vetINI[indBoi];
-                if (verificarGanho < menorGanho) {
-                    menorGanho = verificarGanho;
-                    indMenor = indBoi;
-                    outMenorGanho.innerHTML = `O Boi que alcançou o <span style="font-weight: bold;">menor ganho de peso absoluto</span> foi identificado como 
-                    <span style="font-weight: bold;">${vetID[indMenor]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>. 
-                    Ao final do período de engorda de 100 dias, esse boi obteve um ganho de peso de 
-                    <span style="font-weight: bold; color: blue;">${menorGanho} arrobas</span>`;
+
+                if (verificarGanho > maiorGanho) {
+                    // Se encontrarmos um valor maior, atualizamos a lista de índices e o valor máximo.
+                    indicesMaioresGanhos = [indBoi];
+                    maiorGanho = verificarGanho;
+                } else if (verificarGanho === maiorGanho) {
+                    // Se encontrarmos outro valor igual ao maior ganho, adicionamos seu índice à lista.
+                    indicesMaioresGanhos.push(indBoi);
                 }
+            }
+
+            // Agora que temos a lista de índices dos bois com maior ganho absoluto, podemos exibir as informações.
+            outMaiorGanho.innerHTML = '';
+            for (var i = 0; i < indicesMaioresGanhos.length; i++) {
+                var indMaior = indicesMaioresGanhos[i];
+                outMaiorGanho.innerHTML += `Um Boi que alcançou o <span style="font-weight: bold;">maior ganho de peso absoluto</span> foi identificado como 
+                <span style="font-weight: bold;">${vetID[indMaior]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMaior]}</span>. 
+                Ao final do período de engorda de 100 dias, esse boi obteve um ganho de peso de 
+                <span style="font-weight: bold; color: red;">${maiorGanho} arrobas.</span><br>`;
+            }
+        } else {
+            // Inicialize a lista de índices com o primeiro boi, que será o primeiro valor mínimo encontrado.
+            var indicesMenoresGanhos = [0];
+            var menorGanho = vetFinal[0] - vetINI[0];
+
+            for (var indBoi = 1; indBoi < vetFinal.length; indBoi++) {
+                var verificarGanho = vetFinal[indBoi] - vetINI[indBoi];
+
+                if (verificarGanho < menorGanho) {
+                    // Se encontrarmos um valor menor, atualizamos a lista de índices e o valor mínimo.
+                    indicesMenoresGanhos = [indBoi];
+                    menorGanho = verificarGanho;
+                } else if (verificarGanho === menorGanho) {
+                    // Se encontrarmos outro valor igual ao menor ganho, adicionamos seu índice à lista.
+                    indicesMenoresGanhos.push(indBoi);
+                }
+            }
+
+            // Agora que temos a lista de índices dos bois com menor ganho absoluto, podemos exibir as informações.
+            outMenorGanho.innerHTML = '';
+            for (var i = 0; i < indicesMenoresGanhos.length; i++) {
+                var indMenor = indicesMenoresGanhos[i];
+                outMenorGanho.innerHTML += `Um Boi que alcançou o <span style="font-weight: bold;">menor ganho de peso absoluto</span> foi identificado como 
+                <span style="font-weight: bold;">${vetID[indMenor]}</span>, e pertence à espécie <span style="font-weight: bold;">${vetEspecie[indMenor]}</span>. 
+                Ao final do período de engorda de 100 dias, esse boi obteve um ganho de peso de 
+                <span style="font-weight: bold; color: blue;">${menorGanho} arrobas.</span><br>`;
             }
         }
     }

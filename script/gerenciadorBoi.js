@@ -183,6 +183,7 @@ function removerBoi() {
     } else if (removerIdent.length < 4) {
         alert("Atenção!\n\nDigite 4 caracteres para pesquisar o identificador do boi a ser removido do sistema da fazenda.");
         inIdentBoi.value = "";
+        btRemoverBoi.style.display = "none";
         inIdentBoi.focus();
         outRemoverBoi.innerHTML = "";
 
@@ -199,7 +200,11 @@ function removerBoi() {
         const motivo = prompt("Digite o motivo da remoção:");
 
         // Se o usuário não cancelar o prompt (ou seja, digitou um motivo)
-        if (motivo !== null) {
+        if (motivo == "") {
+            alert("Atenção!\n\nDigite o motivo de remover o boi do sistema.");
+            const motivo = prompt("Digite o motivo da remoção:");
+
+        } else {
             // Exibe uma confirmação para o usuário com o motivo digitado
             const confirmacao = confirm(`Deseja finalizar a ação de remoção?\n\nMotivo: ${motivo}`);
 
@@ -225,9 +230,6 @@ function removerBoi() {
 
                 location.reload();
             }
-        } else {
-            // Se o usuário cancelar o prompt (não digitou um motivo), exibe uma mensagem de alerta
-            alert("Atenção!\n\nDigite o motivo de remover o boi do sistema.")
         }
     }
 }
