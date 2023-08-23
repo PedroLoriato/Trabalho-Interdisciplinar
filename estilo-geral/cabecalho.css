@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+.df-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -11,10 +17,7 @@ header {
     height: 80px;
     box-shadow: 0 1px 10px rgb(0, 0, 0);
     z-index: 2;
-    display: flex;
-    align-items: center;
 }
-
 
 header button {
     background: none;
@@ -25,8 +28,6 @@ header button {
 .caixaHeader {
     width: 940px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -38,8 +39,6 @@ header button {
 
 nav ul {
     font-size: 12px;
-    display: flex;
-    justify-content: center;
     list-style-type: none;
     font-family: 'Trebuchet MS', sans-serif;
     text-transform: uppercase;
@@ -71,6 +70,16 @@ header a::after {
     transition: width 0.4s;
 }
 
+.pg-atual a::after {
+    width: 100%;
+}
+
 header a:hover::after {
     width: 100%;
+}
+
+.link-aplicacao {
+    background: rgb(58, 255, 58);
+    width: 150px;
+    height: 80px;
 }

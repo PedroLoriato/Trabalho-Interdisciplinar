@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <header>
-        <div class="caixaHeader">
+    <header class="df-header">
+        <div class="caixaHeader df-header">
             <a class="logo-imagem" href="#principal"><img src="../icones/logo.png" alt="Logo do Site"></a>
             <nav>
-                <ul>
+                <ul class="df-header">
                     <li><a href="../paginaInicial-fazenda.html">Página Inicial</a></li>
                     <li><a href="../pagina-aplicacao/listagemBoi.html">Listagem dos Bois</a></li>
                     <li><a href="../pagina-aplicacao/pesoBoi.html">Peso dos Bois</a></li>
-                    <li><a href="../pagina-aplicacao/gerenciadorBoi.html">Gerenciador dos Bois</a></li>
+                    <li class="pg-atual"><a href="../pagina-aplicacao/gerenciadorBoi.html">Gerenciador dos Bois</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,7 +58,8 @@
                         placeholder="Digite o peso em arrobas">
                 </label>
                 <p>Período de engorda: 100 dias</p>
-                <button id="btAdicionarBoi">ADICIONAR<img class="botaoBoi" src="../icones/botaoBoi.png" alt="ícone de rosto de boi para o botão"></button>
+                <button id="btAdicionarBoi">ADICIONAR<img class="botaoBoi" src="../icones/botaoBoi.png"
+                        alt="ícone de rosto de boi para o botão"></button>
             </fieldset>
 
             <fieldset class="removerBoi">
@@ -68,20 +69,21 @@
                         title="Utilize apenas letras e números" placeholder="Digite 4 caracteres">
                 </label>
                 <p id="outRemoverBoi"></p>
-                <button id="btRemoverBoi">REMOVER<img class="botaoBoi" src="../icones/botaoBoi.png" alt="ícone de rosto de boi para o botão"></button>
+                <button id="btRemoverBoi">REMOVER<img class="botaoBoi" src="../icones/botaoBoi.png"
+                        alt="ícone de rosto de boi para o botão"></button>
             </fieldset>
     </main>
 
     <footer>
-        <article class="logoFazenda">
-            <img class="footerLogo" src="../icones/logo.png" alt="Logo Rodapé">
-            <h1>Fazenda <br> Boi Gordo</h1>
-            <p>SANTA TERESA - ES <br>RODOVIA ARMANDO MARTINELLI - S/N <br>KM 80 – ZONA RURAL <br>CEP 29660-000</p>
+        <article class="logoFazenda df-footer">
+          <img class="footerLogo" src="../icones/logo.png" alt="Logo Rodapé">
+          <h1>Fazenda <br> Boi Gordo</h1>
+          <p>SANTA TERESA - ES <br>RODOVIA ARMANDO MARTINELLI - S/N <br>KM 80 – ZONA RURAL <br>CEP 29660-000</p>
         </article>
-        <article class="copyright">
-            Copyright &copy; 2023, Fazenda Boi Gordo. Todos os direitos reservados.
+        <article class="copyright df-footer">
+          Copyright &copy; 2023, Fazenda Boi Gordo. Todos os direitos reservados.
         </article>
-    </footer>
+      </footer>
     <script src="../script/vetores.js"></script>
     <script src="../script/gerenciadorBoi.js"></script>
 </body>
