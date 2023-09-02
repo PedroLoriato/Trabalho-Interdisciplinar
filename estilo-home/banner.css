@@ -1,36 +1,31 @@
-* {
-    box-sizing: border-box;
-}
-
 #bannerMain {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
     height: 500px;
     border-radius: 0px;
     filter: brightness(50%) blur(2px);
-    scroll-margin-top: 80px;
 }
 
 .banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .banner>#titleMain {
-    display: flex;
-    color: rgb(40, 221, 0);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 120px;
     position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    color: rgb(40, 221, 0);
     text-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5);
-    margin-bottom: 200px;
-    border-radius: 30px;
+    text-align: center;
+
+    width: 940px;
+    padding: 0 20px;
+    margin-bottom: 50px;
     z-index: 1;
     opacity: 0;
     animation: aparecerTitulo 1s forwards;
@@ -49,12 +44,14 @@
 }
 
 .banner>#titleDesc {
-    display: flex;
-    color: rgb(255, 255, 255);
+    position: absolute;
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: absolute;
+    color: rgb(255, 255, 255);
     text-shadow: 5px 5px 35px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    width: 940px;
     margin-top: 200px;
     z-index: 1;
     opacity: 0;

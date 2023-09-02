@@ -1,24 +1,11 @@
 /*----------------- Páginas da Aplicação -------------------*/
 
-* {
-    box-sizing: border-box;
-}
-
-html,
-body,
-main {
-    margin: 0;
-    padding: 0;
-}
-
 #principal {
-    position: relative;
+    min-height: 100vh;
     margin-top: 80px;
     padding: 20px 0;
     margin-bottom: 0;
-    min-height: 100vh;
     text-align: center;
-    scroll-margin-top: 100px;
     background: rgba(8, 242, 8, 0.216);
 }
 

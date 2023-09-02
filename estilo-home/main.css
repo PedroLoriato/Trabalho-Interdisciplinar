@@ -1,11 +1,9 @@
-* {
-    box-sizing: border-box;
-}
-
-html,
 body {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    background: rgba(8, 242, 8, 0.216);
 }
 
 main {
@@ -13,28 +11,23 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    margin-top: 80px;
-    background: rgba(165, 242, 159, 0.34);
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 section {
-    width: 940px;
-    margin: 0 auto;
+    margin: 0 10px;
     margin-bottom: 20px;
 }
 
 /*-------- Section Nossa Fazenda ---------- */
 
-#secSobreFazenda {
-    scroll-margin-top: 100px;
-}
-
 .sobreFazenda>h1 {
     font-size: 32px;
-    text-align: center;
+    margin-bottom: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: green;
+    color: #008000;
 }
 
 .missaoFazenda {
@@ -117,7 +110,7 @@ section {
 
 .imagemGado {
     display: inline-block;
-    width: 468px;
+    width: 458px;
     height: 350px;
     border: 4px solid #03ff03;
     box-shadow: 0 0 10px #008000;
@@ -126,21 +119,24 @@ section {
 
 .imagemGadoPasto {
     display: inline-block;
-    width: 468px;
+    width: 458px;
     height: 350px;
     border: 4px solid #03ff03;
     box-shadow: 0 0 10px #008000;
     border-radius: 0 0 10px 0;
 }
 
-/*------ Section Nossas Espécies ------*/
-
-#secCarrossel {
-    scroll-margin-top: 80px;
+figure.df-row {
+    margin: 0;
+    padding: 0;
 }
+
+/*------ Section Nossas Espécies ------*/
 
 #secCarrossel>h1 {
     font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: green;
 }
@@ -157,6 +153,7 @@ input[type="radio"] {
 
 .carrossel {
     display: flex;
+    width: 940px;
     height: 420px;
     flex-direction: column;
     align-items: center;
@@ -283,15 +280,13 @@ img {
 
 /*------------------------- Section Nosso Gado ----------------------------*/
 
-#secSobreGado {
-    text-align: center;
-    scroll-margin-top: 100px;
-}
-
 #secSobreGado>h1 {
     font-size: 32px;
+    margin-bottom: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: green;
+    color: #008000;
+
+    text-align: center;
 }
 
 .sobreGado>p {
@@ -304,7 +299,7 @@ img {
 
 .sobreGado>h3 {
     font-size: 35px;
-    margin-bottom: 0;
+    margin-top: 20px;
     font-family: "Helvetica Bold", Arial, Tahoma, sans-serif;
     color: #18350f;
     text-align: left;

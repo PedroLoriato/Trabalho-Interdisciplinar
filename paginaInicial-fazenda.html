@@ -5,49 +5,52 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./estilo-geral/cabecalho.css">
-  <link rel="stylesheet" href="./estilo-home/banner.css">
-  <link rel="stylesheet" href="./estilo-home/main.css">
-  <link rel="stylesheet" href="./estilo-geral/footer.css">
-  <link rel="shortcut icon" href="./icones/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./estilo-geral/cabecalho.css" />
+  <link rel="stylesheet" href="./estilo-home/banner.css" />
+  <link rel="stylesheet" href="./estilo-home/main.css" />
+  <link rel="stylesheet" href="./estilo-geral/footer.css" />
+  <link rel="shortcut icon" href="./icones/logo.png" type="image/x-icon" />
   <title>Fazenda Boi Gordo</title>
 </head>
 
 <body>
-  <header class="df-header">
-    <div class="caixaHeader df-header">
-      <a class="logo-imagem" href="#bannerMain"><img src="./icones/logo.png" alt="Logo do Site"></a>
+  <header class="df-row">
+    <div class="caixaHeader df-row">
+      <a class="logo-imagem" href="#bannerMain"><img src="./icones/logo.png" alt="Logo do Site" /></a>
       <nav>
-        <ul class="df-header">
-          <li><a href="#secSobreFazenda">Nossa Fazenda</a></li>
-          <li><a href="#secCarrossel">Nossas Espécies</a></li>
-          <li><a href="#secSobreGado">Nosso Gado</a></li>
-          <li class="link-aplicacao df-header"><a href="./pagina-aplicacao/listagemBoi.html">Gerenciador Fazenda</a></li>
+        <ul class="df-row">
+          <li class="pg-atual"><a href="./paginaInicial-fazenda.html">Página Inicial</a></li>
+          <li><a href="./pagina-aplicacao/listagemBoi.html">Gerenciador Fazenda</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main>
-    <div class="banner">
-      <p id="titleMain">FAZENDA BOI GORDO</p>
-      <p id="titleDesc">FAZENDA DE ENGORDA DE GADO</p>
-      <img src="./imagens-home/banner.jpg" alt="Banner do Site" id="bannerMain">
-    </div>
 
-    <section class="sobreFazenda" id="secSobreFazenda">
+  <figure class="banner">
+    <p id="titleMain">FAZENDA BOI GORDO</p>
+    <p id="titleDesc">FAZENDA DE ENGORDA DE GADO</p>
+    <img src="./imagens-home/banner.jpg" alt="Banner do Site" id="bannerMain" />
+  </figure>
 
+  <main class="df-column">
+    <section class="sobreFazenda df-column" id="secSobreFazenda">
       <h1>NOSSA FAZENDA</h1>
 
       <div class="missaoFazenda">
-        <img class="imgMissao" src="./icones/missao.png" alt="ícone de missão da fazenda">
+        <img class="imgMissao" src="./icones/missao.png" alt="ícone de missão da fazenda" />
         <div class="missaoTextoFazenda">
           <h3>MISSÃO</h3>
-          <p class="textoMissao">A Fazenda Boi Gordo tem como missão oferecer a melhor técnica de nutrição para
-            confinamento e engorda de bovinos, prezando pelo bem estar físico dos animais. Cadastrado no Ministério da
-            Agricultura, Pecuária e Abastecimento, A Fazenda Boi Gordo tem seu rebanho rastreado pelo Sistema Brasileiro
-            de Identificação e Certificação de Bovinos e Bubalinos (SISBOV). Todos animais abatidos são direcionados
-            para fornecimento de carne ao mercado brasileiro e ao Mercado Comum Europeu, conferindo à empresa
-            Certificação Traces - União Europeia e Certificação de Atendimento às Boas Práticas Agropecuárias.
+          <p class="textoMissao">
+            A Fazenda Boi Gordo tem como missão oferecer a melhor técnica de
+            nutrição para confinamento e engorda de bovinos, prezando pelo bem
+            estar físico dos animais. Cadastrado no Ministério da Agricultura,
+            Pecuária e Abastecimento, A Fazenda Boi Gordo tem seu rebanho
+            rastreado pelo Sistema Brasileiro de Identificação e Certificação
+            de Bovinos e Bubalinos (SISBOV). Todos animais abatidos são
+            direcionados para fornecimento de carne ao mercado brasileiro e ao
+            Mercado Comum Europeu, conferindo à empresa Certificação Traces -
+            União Europeia e Certificação de Atendimento às Boas Práticas
+            Agropecuárias.
           </p>
         </div>
       </div>
@@ -55,126 +58,153 @@
       <div class="infraEstrutura">
         <div class="infraTextoFazenda">
           <h3>INFRAESTRUTURA</h3>
-          <p class="infraTexto">Há mais de 15 anos a Fazenda Boi Gordo é referência em confinamento bovino e possui hoje
-            capacidade para 10
-            mil animais. Com uma equipe especializada composta por zootecnistas e veterinários renomados no segmento,
-            conta com
-            um sistema totalmente informatizado, com total controle de entrada e saída e rastreamento eficiente dos
-            animais. Tudo para oferecer segurança e bem estar aos animais.
+          <p class="infraTexto">
+            Há mais de 15 anos a Fazenda Boi Gordo é referência em
+            confinamento bovino e possui hoje capacidade para 10 mil animais.
+            Com uma equipe especializada composta por zootecnistas e
+            veterinários renomados no segmento, conta com um sistema
+            totalmente informatizado, com total controle de entrada e saída e
+            rastreamento eficiente dos animais. Tudo para oferecer segurança e
+            bem estar aos animais.
           </p>
         </div>
-        <img class="imgInfraestrutura" src="./icones/infraestrutura.png" alt="ícone da infraestrutura da fazenda">
+        <img class="imgInfraestrutura" src="./icones/infraestrutura.png" alt="ícone da infraestrutura da fazenda" />
       </div>
-      <img class="imagemFazenda" src="./imagens-home/fazenda.png" alt="imagem da fazenda">
-      <img class="imagemGado" src="./imagens-home/gadocomendo.jpg" alt="imagem dos bois comendo">
-      <img class="imagemGadoPasto" src="./imagens-home/gadoasas.jpg" alt="imagem dos bois no pasto">
+      <img class="imagemFazenda" src="./imagens-home/fazenda.png" alt="imagem da fazenda" />
+      <figure class="df-row">
+        <img class="imagemGado" src="./imagens-home/gadocomendo.jpg" alt="imagem dos bois comendo" />
+        <img class="imagemGadoPasto" src="./imagens-home/gadoasas.jpg" alt="imagem dos bois no pasto" />
+      </figure>
     </section>
 
-    <section class="carrossel" id="secCarrossel">
-
+    <section class="carrossel df-column" id="secCarrossel">
       <h1>NOSSAS ESPÉCIES</h1>
 
-      <input type="radio" name="slider" id="item-1" checked>
-      <input type="radio" name="slider" id="item-2">
-      <input type="radio" name="slider" id="item-3">
+      <input type="radio" name="slider" id="item-1" checked />
+      <input type="radio" name="slider" id="item-2" />
+      <input type="radio" name="slider" id="item-3" />
 
       <div class="carrossel_imagens">
         <label class="imagem" for="item-1" id="imagem-1">
           <div class="textoCarrossel">
             <h3>Nelore</h3>
-            <p>A espécie Nelore é uma das raças bovinas mais populares e relevantes do Brasil. Originária da Índia, ela
-              se adaptou perfeitamente ao clima tropical brasileiro. Os bois Nelore são conhecidos por sua resistência,
-              adaptabilidade e musculatura bem desenvolvida. Sua carne de qualidade excepcional, com bom marmoreio,
-              torna-os altamente valorizados na indústria de alimentos. O Nelore é uma opção popular entre criadores e
-              produtores de carne bovina, contribuindo para o agronegócio brasileiro.</p>
+            <p>
+              A espécie Nelore é uma das raças bovinas mais populares e
+              relevantes do Brasil. Originária da Índia, ela se adaptou
+              perfeitamente ao clima tropical brasileiro. Os bois Nelore são
+              conhecidos por sua resistência, adaptabilidade e musculatura bem
+              desenvolvida. Sua carne de qualidade excepcional, com bom
+              marmoreio, torna-os altamente valorizados na indústria de
+              alimentos. O Nelore é uma opção popular entre criadores e
+              produtores de carne bovina, contribuindo para o agronegócio
+              brasileiro.
+            </p>
           </div>
-          <img src="./imagens-home/boi-Nelore.jpg" alt="Espécie de Boi Nelore">
+          <img src="./imagens-home/boi-Nelore.jpg" alt="Espécie de Boi Nelore" />
         </label>
         <label class="imagem" for="item-2" id="imagem-2">
           <div class="textoCarrossel">
             <h3>Angus</h3>
-            <p>A espécie Angus, originária da Escócia, é amplamente criada no Brasil. Os bois Angus têm uma aparência
-              imponente, com porte médio a grande. São reconhecidos por sua pelagem predominantemente preta, com alguns
-              indivíduos apresentando pelagem vermelha, chamados Angus Vermelho. A raça Angus é especialmente valorizada
-              por sua carne de excelente qualidade, com bom marmoreio e sabor marcante, o que a torna muito popular na
-              indústria de alimentos.</p>
+            <p>
+              A espécie Angus, originária da Escócia, é amplamente criada no
+              Brasil. Os bois Angus têm uma aparência imponente, com porte
+              médio a grande. São reconhecidos por sua pelagem
+              predominantemente preta, com alguns indivíduos apresentando
+              pelagem vermelha, chamados Angus Vermelho. A raça Angus é
+              especialmente valorizada por sua carne de excelente qualidade,
+              com bom marmoreio e sabor marcante, o que a torna muito popular
+              na indústria de alimentos.
+            </p>
           </div>
-          <img src="./imagens-home/boi-Angus.jpg" alt="Espécie de Boi Angus">
+          <img src="./imagens-home/boi-Angus.jpg" alt="Espécie de Boi Angus" />
         </label>
         <label class="imagem" for="item-3" id="imagem-3">
           <div class="textoCarrossel">
             <h3>Hereford</h3>
-            <p>A espécie Hereford, originária da Inglaterra, é amplamente criada no Brasil. Os bois Hereford têm uma
-              pelagem característica de coloração avermelhada e branca, com marcações distintas no corpo. Essa espécie é
-              valorizada pela qualidade de sua carne, conhecida por seu excelente sabor e maciez. Os bois Hereford são
-              reconhecidos por seu bom desempenho em sistemas de criação a pasto, sendo animais de fácil manejo e
-              adaptabilidade a diferentes ambientes.
+            <p>
+              A espécie Hereford, originária da Inglaterra, é amplamente
+              criada no Brasil. Os bois Hereford têm uma pelagem
+              característica de coloração avermelhada e branca, com marcações
+              distintas no corpo. Essa espécie é valorizada pela qualidade de
+              sua carne, conhecida por seu excelente sabor e maciez. Os bois
+              Hereford são reconhecidos por seu bom desempenho em sistemas de
+              criação a pasto, sendo animais de fácil manejo e adaptabilidade
+              a diferentes ambientes.
             </p>
           </div>
-          <img src="./imagens-home/boi-Hereford.jpg" alt="Espécie de Boi Hereford">
+          <img src="./imagens-home/boi-Hereford.jpg" alt="Espécie de Boi Hereford" />
         </label>
-        <img src="./icones/seta-esquerda.png" class="seta anterior" alt="ícone de seta para esquerda">
-        <img src="./icones/seta-direita.png" class="seta proxima" alt="ícone de seta para direita">
+        <img src="./icones/seta-esquerda.png" class="seta anterior" alt="ícone de seta para esquerda" />
+        <img src="./icones/seta-direita.png" class="seta proxima" alt="ícone de seta para direita" />
       </div>
     </section>
 
     <section class="sobreGado" id="secSobreGado">
-
       <h1>NOSSO GADO</h1>
 
-      <p>Com capacidade para até 10 mil bois em confinamento, a Fazenda Boi Gordo é uma referência em garantir o
-        bem-estar dos animais. Após a fase de engorda, uma equipe dedicada realiza minucioso acompanhamento da saúde e
-        evolução dos bois, assegurando a qualidade dos produtos oferecidos.</p>
+      <p>
+        Com capacidade para até 10 mil bois em confinamento, a Fazenda Boi
+        Gordo é uma referência em garantir o bem-estar dos animais. Após a
+        fase de engorda, uma equipe dedicada realiza minucioso acompanhamento
+        da saúde e evolução dos bois, assegurando a qualidade dos produtos
+        oferecidos.
+      </p>
 
-      <p>Em média, a fazenda mantém cerca de 9.000 bois no sistema de confinamento, resultado do comprometimento em
-        promover uma criação sustentável e responsável. Os registros detalhados dos bois engordados atestam o sucesso do
-        empreendimento, consolidando seu prestígio no mercado agropecuário e inspirando outras propriedades a seguirem
-        os princípios éticos e de excelência na produção de gado.</p>
+      <p>
+        Em média, a fazenda mantém cerca de 9.000 bois no sistema de
+        confinamento, resultado do comprometimento em promover uma criação
+        sustentável e responsável. Os registros detalhados dos bois engordados
+        atestam o sucesso do empreendimento, consolidando seu prestígio no
+        mercado agropecuário e inspirando outras propriedades a seguirem os
+        princípios éticos e de excelência na produção de gado.
+      </p>
 
       <h3>TEMOS NA FAZENDA:</h3>
-      <div class="sobreTotalBois">
-        <img class="totalBois" src="./icones/totalBois.png" alt="ícone de rosto de boi">
+      <figure class="sobreTotalBois">
+        <img class="totalBois" src="./icones/totalBois.png" alt="ícone de rosto de boi" />
         <p id="outBoisTotal"></p>
-      </div>
+      </figure>
 
       <h3>SENDO:</h3>
 
       <div class="caixaEspecies esquerda">
-        <div class="sobreEspecies">
+        <figure class="sobreEspecies">
           <h4>Angus</h4>
-          <img src="./icones/boiAngus.png" alt="ícone Boi Angus" class="icone-boi angus">
-        </div>
+          <img src="./icones/boiAngus.png" alt="ícone Boi Angus" class="icone-boi angus" />
+        </figure>
         <p id="outQtdAngus" class="numeroEspecie"></p>
       </div>
 
       <div class="caixaEspecies centro">
-        <div class="sobreEspecies">
+        <figure class="sobreEspecies">
           <h4>Hereford</h4>
-          <img src="./icones/boiHereford.png" alt="ícone Boi Hereford" class="icone-boi">
-        </div>
+          <img src="./icones/boiHereford.png" alt="ícone Boi Hereford" class="icone-boi" />
+        </figure>
         <p id="outQtdHereford" class="numeroEspecie"></p>
       </div>
 
       <div class="caixaEspecies direita">
-        <div class="sobreEspecies">
+        <figure class="sobreEspecies">
           <h4>Nelore</h4>
-          <img src="./icones/boiNelore.png" alt="ícone Boi Nelore" class="icone-boi nelore">
-        </div>
+          <img src="./icones/boiNelore.png" alt="ícone Boi Nelore" class="icone-boi nelore" />
+        </figure>
         <p id="outQtdNelore" class="numeroEspecie"></p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <article class="logoFazenda df-footer">
-      <img class="footerLogo" src="./icones/logo.png" alt="Logo Rodapé">
-      <h1>Fazenda <br> Boi Gordo</h1>
-      <p>SANTA TERESA - ES <br>RODOVIA ARMANDO MARTINELLI - S/N <br>KM 80 – ZONA RURAL <br>CEP 29660-000</p>
+  <footer class="df-column">
+    <article class="logoFazenda df-row">
+      <img class="footerLogo" src="./icones/logo.png" alt="Logo Rodapé" />
+      <h1>Fazenda<br />Boi Gordo</h1>
+      <p>SANTA TERESA - ES <br />RODOVIA ARMANDO MARTINELLI - S/N <br />KM 80 –
+        ZONA RURAL <br />CEP 29660-000</p>
     </article>
     <article class="copyright df-footer">
       Copyright &copy; 2023, Fazenda Boi Gordo. Todos os direitos reservados.
     </article>
   </footer>
+
   <script src="./script/vetores.js"></script>
   <script src="./script/paginaInicial.js"></script>
 </body>
