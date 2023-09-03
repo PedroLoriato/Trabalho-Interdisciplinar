@@ -19,6 +19,7 @@
 }
 
 header {
+    flex-grow: 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,9 +37,9 @@ header button {
 }
 
 .caixaHeader {
-    width: 1400px;
-    margin: 0 auto;
-    justify-content: space-around;
+    width: 940px;
+    margin: 0 20px;
+    justify-content: space-between;
 }
 
 .caixaHeader img {

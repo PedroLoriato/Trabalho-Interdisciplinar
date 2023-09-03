@@ -1,12 +1,23 @@
-/*----------------- Páginas da Aplicação -------------------*/
-
-#principal {
-    min-height: 100vh;
-    margin-top: 80px;
-    padding: 20px 0;
-    margin-bottom: 0;
-    text-align: center;
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    
     background: rgba(8, 242, 8, 0.216);
+}
+
+/*----------------- Páginas da Aplicação -------------------*/
+main {
+    flex-grow: 0;
+    
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+.teste {
+    flex-grow: 1;
 }
 
 h1 {
@@ -157,6 +168,7 @@ p {
     display: inline-block;
     width: 300px;
     height: 350px;
+    margin: 10px;
     border: 2px solid green;
     border-radius: 10px;
 }
@@ -207,6 +219,7 @@ p {
     width: 300px;
     height: 350px;
     vertical-align: top;
+    margin: 10px;
     border: 2px solid green;
     border-radius: 10px;
 }
